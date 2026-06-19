@@ -151,56 +151,51 @@ function Slider() {
         <Header />
         
 {/* Hero Section */}
-        <section className="relative w-full h-[480px] md:h-[520px] flex items-center">
-          {/* Background Image */}
-          <img
-            src="/Home_Page_01.png"
-            alt="Scientistic Era Background"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+<section className="w-full pt-28">
+  {/* Banner Image: 'block' removes the bottom white-space gap inherent to images */}
+  <img
+    src="/hero_img.jpeg"
+    alt="Scientistic Era Banner"
+    className="w-full h-[70vh] object-cover object-center block"
+  />
 
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/30"></div>
-
-          {/* Content Left Side */}
-          <div className="relative z-10 max-w-7xl mx-auto w-full px-6 mt-10 md:mt-16">
-            <div className="max-w-2xl text-left">
-              <p className="text-xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
-                WELCOME TO
-              </p>
-              <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-6">
-                ScientisticEra Private Limited
-              </h1>
-              <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-[1.3] pb-2">
-                Advancing Research. Protecting Innovation. Publishing Impact
-              </h1>
-            </div>
-          </div>
-        </section>
-
-        {/* Corporate Profile Section */}
+  {/* Welcome Content: Immediately follows the image */}
+  {/* <div className="w-full bg-white px-6 pt-12 pb-12">
+    <div className="max-w-7xl mx-auto">
      
-
-{/* Corporate Profile / Core Mission Banner */}
-
-
-{/* Full-Screen Mission Banner Section */}
-<section className="w-full py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 via-[#B0D9E7]/30 to-purple-50 border-y border-blue-100">
-  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-    
-    {/* Left Column: Heading & Large High-Contrast Icon */}
-    
-
-    {/* Right Column: Clean, High-Impact Full-Width Typography */}
-    <div className="w-full ">
-      <p 
-        className="text-gray-800 text-lg md:text-xl md:text-2xl font-medium leading-relaxed tracking-wide text-center "
-        style={{ textAlign: 'justify', textJustify: 'inter-word' }}
-      >
-        <strong className="text-[#072F4A] font-bold">Scientistic Era Pvt. Ltd.</strong> is dedicated to promoting scientific excellence by supporting researchers, academicians, startups, healthcare professionals, and innovators through quality-driven consultancy services, training programs, publication assistance, and IPR facilitation.
+      <p className="text-lg md:text-3xl font-bold text-blue-500 uppercase tracking-wide pb-1">
+   
       </p>
-    </div>
 
+      
+      <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#072F4A] leading-normal mt-1 pb-2">
+        
+      </h1>
+      
+     
+      <h2 className="mt-2 text-xl md:text-3xl lg:text-3xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent leading-relaxed pb-2">
+       
+      </h2>
+    </div>
+  </div> */}
+</section>
+
+{/* Introduction line Section */}
+{/* Changed py-10 to pt-12 pb-20 to maintain the large gap after the text */}
+<section className="w-full pt-12 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50/50 via-[#B0D9E7]/20 to-purple-50/50 border-y border-blue-50">
+  <div className="max-w-7xl mx-auto">
+    <p
+      className="text-gray-800 text-lg md:text-2xl font-medium leading-relaxed text-center"
+      style={{ textAlign: "justify" }}
+    >
+      <strong className="text-[#072F4A]">
+        Scientistic Era Pvt. Ltd.
+      </strong>{" "}
+      is dedicated to promoting scientific excellence by supporting
+      researchers, academicians, startups, healthcare professionals,
+      and innovators through quality-driven consultancy services,
+      training programs, publication assistance, and IPR facilitation.
+    </p>
   </div>
 </section>
         {/* Inauguration Highlight Section */}

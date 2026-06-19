@@ -61,64 +61,58 @@ export default function OurStory() {
 
       </section>
 
-      {/* Story Section */}
-      {/* <section className="py-20 max-w-6xl mx-auto px-6"> */}
-      <section className="py-20 max-w-4xl mx-auto px-6 text-center text-dark">
+{/* Story Section - Keep Justified for readability */}
+<section className="py-16 max-w-4xl mx-auto px-6 text-center">
+  <p className="text-gray-800 leading-relaxed text-xl text-justify">
+    Scientistic Era Pvt. Ltd. is one of India’s leading research publication and academic consultancy organizations, committed to empowering researchers globally through ethical publication practices, expert mentorship, innovative research support, and comprehensive academic services.
+  </p>
+</section>
 
-        <p className="text-gray-800 leading-relaxed text-xl">
-          We are India’s premier research publication house, dedicated to empowering researchers worldwide with ethical publication practices, expert guidance, and comprehensive academic services.
-        </p>
-      </section>
+{/* Mission & Vision Section */}
+<section className="py-10 px-6">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-gray-900">Our Mission & Vision</h2>
+      <p className="text-gray-600 mt-3">Guiding principles that drive ScientisticEra forward.</p>
+    </div>
 
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-900">
-          Our Mission & Vision
-        </h2>
-        <p className="text-gray-600 mt-3">
-          Guiding principles that drive ScientisticEra forward.
-        </p>
-      </div>
-
-      {/* Mission & Vision */}
-      <section className="pt-5 mb-20 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8">
-
-            {/* <Card className="border-2 border-purple-200 hover:shadow-2xl transition-all bg-gradient-to-br from-purple-50 to-white"> */}
-            <Card className="border-2 border-purple-200 hover:shadow-2xl hover:-translate-y-2 duration-300 transition-all bg-gradient-to-br from-purple-50 to-white">
-              <CardHeader className="items-center text-center">
-                <div className="flex items-center justify-center gap-3 mb-3">
-                  <Eye className="w-10 h-10 text-purple-600" />
-                  <CardTitle className="text-3xl text-gray-900">Our Vision</CardTitle>
-                </div>
-
-                <CardDescription className="text-xl text-gray-900 leading-relaxed space-y-3">
-                  <p>
-                    Envision a society where scientific knowledge is the primary lens through which we understand the world, heavily relying on empirical evidence and rigorous methodology to guide decision-making across all aspects of life, from policy to personal choices, potentially leading to a highly rational and technologically advanced society, but also raising concerns about the potential limitations of science in addressing complex human issues and ethical considerations.
-                  </p>
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            {/* <Card className="border-2 border-blue-200 hover:shadow-2xl transition-all bg-gradient-to-br from-blue-50 to-white"> */}
-            <Card className="border-2 border-purple-200 hover:shadow-2xl hover:-translate-y-2 duration-300 transition-all bg-gradient-to-br from-purple-50 to-white">
-
-              <CardHeader className="items-center text-center">
-                <div className="flex items-center justify-center gap-3 mb-3">
-                  <Target className="w-10 h-10 text-blue-600" />
-                  <CardTitle className="text-3xl text-gray-900">Our Mission</CardTitle>
-                </div>
-
-                <CardDescription className="text-xl text-gray-900 leading-relaxed space-y-3">
-                  <p>
-                    To promote the widespread dissemination and understanding of scientific knowledge across various disciplines, aiming to empower individuals and societies to make informed decisions based on evidence-based research, while its vision is to create a future where scientific understanding is deeply integrated into all aspects of life, fostering progress and innovation through a robust scientific culture.
-                  </p>
-                </CardDescription>
-              </CardHeader>
-            </Card>
+    <div className="grid md:grid-cols-2 gap-8">
+      {/* Vision Card */}
+      <Card className="border-2 border-purple-200 hover:shadow-xl transition-all bg-gradient-to-br from-purple-50 to-white flex flex-col h-full">
+        <CardHeader className="items-center text-center">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <Eye className="w-10 h-10 text-purple-600" />
+            <CardTitle className="text-3xl text-gray-900">Our Vision</CardTitle>
           </div>
-        </div>
-      </section>
+          <CardDescription className="text-xl text-gray-900 leading-relaxed text-justify">
+            To become a globally recognized platform for scientific innovation, research excellence, and intellectual property advancement.
+          </CardDescription>
+        </CardHeader>
+      </Card>
+
+      {/* Mission Card - List kept Left-Aligned for bullets */}
+      <Card className="border-2 border-purple-200 hover:shadow-xl transition-all bg-gradient-to-br from-purple-50 to-white flex flex-col h-full">
+        <CardHeader className="items-center text-center">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <Target className="w-10 h-10 text-blue-600" />
+            <CardTitle className="text-3xl text-gray-900">Our Mission</CardTitle>
+          </div>
+          <CardDescription className="text-xl text-gray-900 leading-relaxed text-left">
+            <ul className="list-disc pl-6 space-y-3">
+              <li>To empower young researchers and innovators</li>
+              <li>To promote ethical and quality research practices</li>
+              <li>To support scientific publication and commercialization</li>
+              <li>To strengthen industry–academia collaboration</li>
+              <li>To encourage innovation through IPR awareness and protection</li>
+            </ul>
+          </CardDescription>
+        </CardHeader>
+      </Card>
+    </div>
+  </div>
+</section>
+
+
 <section className="py-20 px-4 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-600 relative overflow-hidden">
           {/* Decorative background elements */}
           <div className="absolute inset-0 opacity-10">
@@ -250,7 +244,7 @@ export default function OurStory() {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
 
           {/* LEFT CONTENT */}
-          <div className="space-y-6 text-gray-800 leading-relaxed text-lg">
+          <div className="space-y-6 text-gray-800 leading-relaxed text-lg text-justify">
 
             <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-6">
               Dr. Sudhanshu Kumar Jha
@@ -319,7 +313,7 @@ export default function OurStory() {
           </div>
           
         </div>
-             <div className="max-w-7xl mx-auto px-6 text-left mt-8 space-y-6 text-gray-800 leading-relaxed text-lg">
+             <div className="max-w-7xl mx-auto px-6 text-left mt-8 space-y-6 text-gray-800 leading-relaxed text-lg text-justify">
             <p>
               Dr. Jha was honored with the prestigious Young Researcher Award – 2024 (Volume 9, Issue 3) by the Institute of Scholars (INSC) (Membership ID: 20248YRA69). He also received the Nobel Scientist Award 2025 at the International Scientific Awards 2025 by Scientific Laurels and was conferred the Young Scientist Award 2025 by the KTK Outstanding Achievers and Education Foundation.
             </p>
@@ -619,7 +613,7 @@ Collaborations with academic institutions and research bodies allow us to suppor
 
 <div className="mt-12 flex justify-center items-center gap-10 flex-wrap">
 
-<img src="/MOU_03.png" className="h-full w-96 object-contain transition duration-300 hover:scale-105 hover:shadow-xl"/>
+<img src="/MOU_College.jpg" className="h-full w-96 object-contain transition duration-300 hover:scale-105 hover:shadow-xl"/>
 
 </div>
 
@@ -665,11 +659,11 @@ Our industry partnerships support innovation translation, patent filing assistan
 
 <img src="/MOU_01.png" className="h-44 mx-auto object-contain "/>
 
-<img src="/MOU_02.png" className="h-44 mx-auto object-contain "/>
+<img src="/MOU_saraswati.jpg" className="h-44 mx-auto object-contain "/>
 
-<img src="/MOU_04.png" className="h-44 mx-auto object-contain "/>
+<img src="/MOU_HAryuveda.jpg" className="h-44 mx-auto object-contain "/>
 
-<img src="/MOU_05.png" className="h-44 mx-auto object-contain"/>
+<img src="/MOU_HHDaiwik.jpg" className="h-44 mx-auto object-contain"/>
 
 </div>
 
@@ -691,7 +685,7 @@ At ScientisticEra Private Limited, collaboration is architected as a performance
 </p>
 
 <p className="text-gray-700 mt-4 max-w-4xl mx-auto">
-We operate at the intersection of academia, innovation, and regulatory frameworks — integrating institutional partnerships, peer-review publishing networks, and industry stakeholders to deliver measurable scholarly and IP outcomes aligned with international standards.
+We operate at the intersection of academia, innovation, and regulatory frameworks integrating institutional partnerships, peer-review publishing networks, and industry stakeholders to deliver measurable scholarly and IP outcomes aligned with international standards.
 </p>
 
 </div>
