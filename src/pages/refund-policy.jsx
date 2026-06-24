@@ -53,7 +53,7 @@ export default function RefundPolicyPage() {
           <div className="flex items-center gap-2">
             <div className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse" />
             <span className="font-semibold text-sm tracking-wide truncate max-w-[180px] sm:max-w-none">
-              Refund Policy - ScientisticEra
+              Refund Policy - ScientisticEra Pvt. Ltd.
             </span>
           </div>
           

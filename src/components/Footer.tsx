@@ -14,20 +14,22 @@ export function Footer() {
          
           <div className="flex flex-col space-y-4 lg:col-span-3">
             <div className="flex items-center space-x-3">
+              <Link href="/">
               <div className="relative w-32 h-32 overflow-hidden">
                 <Image
-                  src="/logo sc.png"
+                  src="/logo_new.jpeg"
                   alt="ScientisticEra Logo"
                   fill
                   className="object-cover"
                 />
               </div>
-              <div>
+              </Link>
+              {/* <div>
                 <h3 className="text-xl font-bold text-blue-600">
                   ScientisticEra
                 </h3>
                 <p className="text-m text-white-400">Pvt Ltd</p>
-              </div>
+              </div> */}
             </div>
             {/* <p className="text-gray-300 text-sm leading-relaxed">
               Empowering researchers and academics with world-class publication services, 

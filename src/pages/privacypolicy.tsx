@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
           <div className="flex items-center gap-2">
             <div className="w-2.5 h-2.5 bg-blue-400 rounded-full animate-pulse" />
             <span className="font-semibold text-sm tracking-wide truncate max-w-[180px] sm:max-w-none">
-              Privacy Settings - ScientisticEra
+              Privacy Settings - ScientisticEra Pvt. Ltd.
             </span>
           </div>
           
@@ -91,7 +91,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Intro Copy */}
           <p className="text-gray-700 text-base leading-relaxed mb-6">
-            At <strong className="text-[#072F4A]">Scientistic Era Pvt. Ltd.</strong>, we respect your privacy and are committed to protecting your personal and professional information.
+            At <strong className="text-[#072F4A]">ScientisticEra Pvt. Ltd.</strong>, we respect your privacy and are committed to protecting your personal and professional information.
           </p>
 
           {/* Section 1: Data Accumulation Parameters */}

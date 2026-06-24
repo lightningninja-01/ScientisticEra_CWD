@@ -53,7 +53,7 @@ export default function TermsAndConditionsPage() {
           <div className="flex items-center gap-2">
             <div className="w-2.5 h-2.5 bg-purple-400 rounded-full animate-pulse" />
             <span className="font-semibold text-sm tracking-wide truncate max-w-[180px] sm:max-w-none">
-              Terms & Conditions - ScientisticEra
+              Terms & Conditions - ScientisticEra Pvt. Ltd.
             </span>
           </div>
           
@@ -91,7 +91,7 @@ export default function TermsAndConditionsPage() {
 
           {/* Intro Copy */}
           <p className="text-gray-700 text-base leading-relaxed mb-6">
-            By using the services of <strong className="text-[#072F4A]">Scientistic Era Pvt. Ltd.</strong>, users agree to comply with all applicable policies and ethical research standards.
+            By using the services of <strong className="text-[#072F4A]">ScientisticEra Pvt. Ltd.</strong>, users agree to comply with all applicable policies and ethical research standards.
           </p>
 
           {/* Section 1: Key Terms */}

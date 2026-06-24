@@ -6,8 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import React, { useState, useEffect } from "react";
-import { useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Make sure to import or use your own custom arrow svg icons
 import {
@@ -33,38 +32,6 @@ import {
   User
 } from "lucide-react";
 
-export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const testimonials = [
-    {
-      name: "Dr. Priya Sharma",
-      role: "Assistant Professor, IIT Delhi",
-      rating: 5,
-      text: "ScientisticEra helped me publish 3 papers in Scopus-indexed journals within 6 months. Their guidance throughout the process was invaluable. Highly recommended for research scholars!"
-    },
-    {
-      name: "Prof. Rajesh Kumar",
-      role: "PhD Guide, Anna University",
-      rating: 5,
-      text: "The PhD guidance program is exceptional. My students received mentorship from industry experts, and their thesis quality improved significantly. Thank you, ScientisticEra!"
-    },
-    {
-      name: "Ms. Anita Desai",
-      role: "Research Scholar, NIT Trichy",
-      rating: 5,
-      text: "I attended their webinar on research methodology and it completely transformed my approach. The practical tips and personalized feedback were game-changers for my work."
-    }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
 function Slider() {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [isReady, setIsReady] = useState(false);
@@ -74,7 +41,7 @@ function Slider() {
     "/MOU_College.jpg",
     "/MOU_HAryuveda.jpg",
     "/MOU_HHDaiwik.jpg",
-    "/MOU_01.png",
+    "/gogo logo.png",
   ];
 
   const tripledLogos = [...logos, ...logos, ...logos];
@@ -83,7 +50,7 @@ function Slider() {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    let animationFrame: number;
+    let animationFrame;
     let position = 0;
     const speed = 0.8;
 
@@ -114,7 +81,7 @@ function Slider() {
     <div className="relative w-full overflow-hidden max-w-full py-2 bg-transparent">
       <div
         ref={sliderRef}
-        className="flex gap-6 sm:gap-12 items-center" // Responsive gaps between logos
+        className="flex gap-6 sm:gap-12 items-center"
         style={{
           width: "max-content",
           display: "flex",
@@ -126,7 +93,7 @@ function Slider() {
         {tripledLogos.map((src, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-40 h-24 sm:w-56 sm:h-32 bg-white rounded-xl shadow-sm border border-gray-100 p-3 sm:p-4 flex items-center justify-center" // Responsive card sizing
+            className="flex-shrink-0 w-40 h-24 sm:w-56 sm:h-32 bg-white rounded-xl shadow-sm border border-gray-100 p-3 sm:p-4 flex items-center justify-center"
           >
             <img
               src={src}
@@ -140,6 +107,56 @@ function Slider() {
   );
 }
 
+export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const [galleryIndex, setGalleryIndex] = useState(0);
+
+  const gallerySlides = [
+    { src: "/Gallery-1.jpg", alt: "Gallery Exhibition 1" },
+    { src: "/about1.png", alt: "Scientistic Era Corporate Presentation" }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setGalleryIndex((prev) => (prev + 1) % gallerySlides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [gallerySlides.length]);
+
+  const nextSlide = () => setGalleryIndex((prev) => (prev + 1) % gallerySlides.length);
+  const prevSlide = () => setGalleryIndex((prev) => (prev - 1 + gallerySlides.length) % gallerySlides.length);
+  
+  const testimonials = [
+    {
+      name: "Dr. Priya Sharma",
+      role: "Assistant Professor, IIT Delhi",
+      rating: 5,
+      text: "ScientisticEra helped me publish 3 papers in Scopus-indexed journals within 6 months. Their guidance throughout the process was invaluable. Highly recommended for research scholars!"
+    },
+    {
+      name: "Prof. Rajesh Kumar",
+      role: "PhD Guide, Anna University",
+      rating: 5,
+      text: "The PhD guidance program is exceptional. My students received mentorship from industry experts, and their thesis quality improved significantly. Thank you, ScientisticEra!"
+    },
+    {
+      name: "Ms. Anita Desai",
+      role: "Research Scholar, NIT Trichy",
+      rating: 5,
+      text: "I attended their webinar on research methodology and it completely transformed my approach. The practical tips and personalized feedback were game-changers for my work."
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+
 
   return (
     <>
@@ -151,18 +168,18 @@ function Slider() {
         <Header />
         
 {/* Hero Section */}
-<section className="w-full pt-28">
+<section className="w-full pt-28 bg-[#020b14]">
   {/* Banner Image: 'block' removes the bottom white-space gap inherent to images */}
   <img
-    src="/hero_img.jpeg"
+    src="/new_hero_img.png"
     alt="Scientistic Era Banner"
-    className="w-full h-[70vh] object-cover object-center block"
+    className="w-full h-full max-h-[calc(100vh-7rem)] object-contain object-top block mx-auto"
   />
 
   {/* Welcome Content: Immediately follows the image */}
   {/* <div className="w-full bg-white px-6 pt-12 pb-12">
     <div className="max-w-7xl mx-auto">
-     
+      
       <p className="text-lg md:text-3xl font-bold text-blue-500 uppercase tracking-wide pb-1">
    
       </p>
@@ -189,7 +206,7 @@ function Slider() {
       style={{ textAlign: "justify" }}
     >
       <strong className="text-[#072F4A]">
-        Scientistic Era Pvt. Ltd.
+        ScientisticEra Pvt. Ltd.
       </strong>{" "}
       is dedicated to promoting scientific excellence by supporting
       researchers, academicians, startups, healthcare professionals,
@@ -245,127 +262,109 @@ function Slider() {
           </div>
         </section> */}
 
+        {/* Long Rectangle Slider Section */}
         <section className="py-16 px-4 bg-[#B0D9E7] overflow-hidden">
-  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
+            
+            {/* Slider Column */}
+            <div className="md:w-1/2 w-full flex justify-center">
+              {/* THE FIX: max-w-[380px] keeps it narrow, creating a vertical rectangle */}
+              <div className="relative w-full max-w-[380px] group bg-white p-3 rounded-2xl shadow-xl flex flex-col">
+                
+                {/* h-[550px] makes it tall */}
+                <div className="overflow-hidden relative rounded-xl h-[550px] w-full flex-grow">
+                  {gallerySlides.map((slide, index) => (
+                    <div
+                      key={index}
+                      className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                        galleryIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
+                      }`}
+                    >
+                      <img
+                        src={slide.src}
+                        alt={slide.alt}
+                        className="w-full h-full object-cover rounded-xl object-top" 
+                      />
+                    </div>
+                  ))}
+                </div>
 
-    {/* Left Column: Responsive 2-Image Slider Controls */}
-    <div className="md:w-1/2 w-full flex justify-center">
-      <div className="relative w-full max-w-md group bg-white p-3 rounded-2xl shadow-xl">
-        
-        {/* Slider Window Container */}
-        <div className="overflow-hidden relative rounded-xl h-[400px] w-full">
-          {[
-            { src: "/Gallery-1.jpg", alt: "Gallery Exhibition 1" },
-            { src: "/about1.png", alt: "Scientistic Era Corporate Presentation" }
-          ].map((slide, index) => {
-            // Internal State setup using component's parent hooks or an active slider index context
-            const [activeImg, setActiveImg] = useState(0);
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition shadow-md backdrop-blur-sm"
+                  aria-label="Previous Slide"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
 
-            // Auto rotation hook wrapper
-            useEffect(() => {
-              const timer = setInterval(() => {
-                setActiveImg((prev) => (prev === 0 ? 1 : 0));
-              }, 4000); // Rotates every 4 seconds automatically
-              return () => clearInterval(timer);
-            }, []);
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition shadow-md backdrop-blur-sm"
+                  aria-label="Next Slide"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
 
-            return (
-              <div
-                key={index}
-                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                  activeImg === index ? "opacity-100 z-10" : "opacity-0 z-0"
-                }`}
-              >
-                <img
-                  src={slide.src}
-                  alt={slide.alt}
-                  className="w-full h-full object-cover rounded-xl"
-                />
+                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+                  {gallerySlides.map((_, index) => (
+                    <div
+                      key={index}
+                      onClick={() => setGalleryIndex(index)}
+                      className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-all shadow shadow-black/40 ${
+                        galleryIndex === index ? "bg-white scale-110" : "bg-white/50"
+                      }`}
+                    ></div>
+                  ))}
+                </div>
               </div>
-            );
-          })}
-        </div>
+            </div>
 
-        {/* Left Interactive Arrow Navigation */}
-        <button
-          onClick={() => {
-            const el = document.getElementById("slider-trigger");
-            el?.click();
-          }}
-          className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition shadow-md backdrop-blur-sm"
-          aria-label="Previous Slide"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
+            {/* Typography Column */}
+            <div 
+              className="md:w-1/2 w-full text-center md:text-left flex flex-col justify-center" 
+              style={{ fontFamily: '"Times New Roman", Times, serif' }}
+            >
+              <h2 className="text-4xl md:text-6xl font-bold text-[#072F4A] mb-4 leading-tight">
+                Who We Are:
+              </h2>
 
-        {/* Right Interactive Arrow Navigation */}
-        <button
-          id="slider-trigger"
-          onClick={() => {
-            // Triggers toggle manually over slide index arrays
-            const event = new CustomEvent("manual-slide-shift");
-            window.dispatchEvent(event);
-          }}
-          className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition shadow-md backdrop-blur-sm"
-          aria-label="Next Slide"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
+              <p className="font-semibold text-lg mb-6 text-gray-800">
+                Inaugurated by “Honourable Shripad Yesso Naik Ji” Minister of State for New & Renewable Energy, Government of India
+              </p>
 
-        {/* Micro Slider Dots indicators */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-          <div className="w-2.5 h-2.5 rounded-full bg-white transition-all shadow shadow-black/40"></div>
-          <div className="w-2.5 h-2.5 rounded-full bg-white/50 transition-all shadow shadow-black/40"></div>
-        </div>
-      </div>
-    </div>
+              <p 
+                className="text-gray-700 text-lg mb-4" 
+                style={{ textAlign: 'justify', textJustify: 'inter-word' }}
+              >
+                <strong>ScientisticEra Pvt. Ltd.</strong> is a multidisciplinary research and innovation organization committed to advancing scientific knowledge, healthcare innovation, and intellectual development through collaborative research, consultancy, and educational initiatives.
+              </p>
 
-    {/* Right Column: Clean Typographical Copy Layout */}
-    {/* Right Content Column */}
-<div className="md:w-1/2 w-full text-center md:text-left">
-  <h2 className="text-4xl md:text-6xl font-bold text-[#072F4A] mb-4 leading-tight">
-    Who We Are:
-  </h2>
+              <p 
+                className="text-gray-700 text-lg mb-4"
+                style={{ textAlign: 'justify', textJustify: 'inter-word' }}
+              >
+                We work closely with researchers, universities, healthcare institutions, startups, and industries to provide professional guidance in:
+              </p>
 
-  <p className="font-semibold text-lg mb-6 text-gray-800">
-    Inaugurated by “Honourable Shripad Yesso Naik Ji” Minister of State for New & Renewable Energy, Government of India
-  </p>
+              <ul className="list-disc list-inside text-gray-700 text-lg leading-relaxed mb-6 md:text-left inline-block text-left pl-2">
+                <li>Research & Development</li>
+                <li>Scientific Writing & Publication</li>
+                <li>Intellectual Property Rights (IPR)</li>
+                <li>Clinical & Preclinical Research Support</li>
+                <li>Academic Training & Workshops</li>
+                <li>Research Consultancy Services</li>
+                <li>Innovation & Startup Support</li>
+              </ul>
 
-  {/* Added style for clean justified text alignment */}
-  <p 
-    className="text-gray-700 text-lg mb-4" 
-    style={{ textAlign: 'justify', textJustify: 'inter-word' }}
-  >
-    <strong>Scientistic Era Pvt. Ltd.</strong> is a multidisciplinary research and innovation organization committed to advancing scientific knowledge, healthcare innovation, and intellectual development through collaborative research, consultancy, and educational initiatives.
-  </p>
-
-  <p 
-    className="text-gray-700 text-lg mb-4"
-    style={{ textAlign: 'justify', textJustify: 'inter-word' }}
-  >
-    We work closely with researchers, universities, healthcare institutions, startups, and industries to provide professional guidance in:
-  </p>
-
-  <ul className="list-disc list-inside text-gray-700 text-lg leading-relaxed mb-6 md:text-left inline-block text-left pl-2">
-    <li>Research & Development</li>
-    <li>Scientific Writing & Publication</li>
-    <li>Intellectual Property Rights (IPR)</li>
-    <li>Clinical & Preclinical Research Support</li>
-    <li>Academic Training & Workshops</li>
-    <li>Research Consultancy Services</li>
-    <li>Innovation & Startup Support</li>
-  </ul>
-
-  <p 
-    className="text-gray-700 text-lg"
-    style={{ textAlign: 'justify', textJustify: 'inter-word' }}
-  >
-    Our mission is to create a strong ecosystem where science and innovation contribute meaningfully to society and global development.
-  </p>
-</div>
-
-  </div>
-</section>
+              <p 
+                className="text-gray-700 text-lg"
+                style={{ textAlign: 'justify', textJustify: 'inter-word' }}
+              >
+                Our mission is to create a strong ecosystem where science and innovation contribute meaningfully to society and global development.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* <section className="py-20 px-4">
   <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -652,75 +651,63 @@ function Slider() {
         {/* </section> */}
 
         {/* Services Overview Section */}
-<section className="py-16 px-4 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50">
+<section className="pt-16 pb-8 px-4 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50">
   <div className="max-w-6xl mx-auto">
     
     {/* Section Heading Badge */}
-    <div className="text-center mb-16">
+    <div className="text-center mb-12">
       <Badge className="bg-blue-100 text-blue-700 hover:bg-blue-200 px-6 py-2.5 text-lg font-bold uppercase tracking-wide rounded-full shadow-sm">
         Our Services
       </Badge>
     </div>
 
-    {/* Responsive Services Box Layout Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-stretch justify-center">
+    {/* Responsive Services Box Layout Grid (2x2 layout for 4 items) */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch justify-center">
       
       {/* Service Box 1 */}
-      <Card className="flex flex-col justify-center h-full group hover:shadow-2xl transition-all duration-300 border-2 hover:border-blue-500 bg-white overflow-hidden p-6 md:p-8 rounded-2xl">
-        <CardHeader className="p-0 flex flex-row items-start gap-5">
+      <Card className="flex flex-col justify-center h-full group hover:shadow-2xl transition-all duration-300 border-2 hover:border-blue-500 bg-white overflow-hidden p-6 rounded-2xl">
+        <CardHeader className="p-0 flex flex-row items-center gap-4">
           <div className="p-3 bg-blue-50 text-blue-600 rounded-xl group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm flex-shrink-0">
-            <FileText className="w-8 h-8" />
+            <FileText className="w-6 h-6" />
           </div>
-          <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900 m-0 leading-tight transition-colors duration-200 group-hover:text-blue-600">
-            Research Development & Publication Support.
+          <CardTitle className="text-lg md:text-xl font-semibold text-gray-900 m-0 leading-snug transition-colors duration-200 group-hover:text-blue-600">
+            Research Development, Methodology Guidance & Publication Support.
           </CardTitle>
         </CardHeader>
       </Card>
 
       {/* Service Box 2 */}
-      <Card className="flex flex-col justify-center h-full group hover:shadow-2xl transition-all duration-300 border-2 hover:border-purple-500 bg-white overflow-hidden p-6 md:p-8 rounded-2xl">
-        <CardHeader className="p-0 flex flex-row items-start gap-5">
+      <Card className="flex flex-col justify-center h-full group hover:shadow-2xl transition-all duration-300 border-2 hover:border-purple-500 bg-white overflow-hidden p-6 rounded-2xl">
+        <CardHeader className="p-0 flex flex-row items-center gap-4">
           <div className="p-3 bg-purple-50 text-purple-600 rounded-xl group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300 shadow-sm flex-shrink-0">
-            <GraduationCap className="w-8 h-8" />
+            <GraduationCap className="w-6 h-6" />
           </div>
-          <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900 m-0 leading-tight transition-colors duration-200 group-hover:text-purple-600">
-            Thesis & Dissertation Consultancy.
+          <CardTitle className="text-lg md:text-xl font-semibold text-gray-900 m-0 leading-snug transition-colors duration-200 group-hover:text-purple-600">
+            Research Mentorship, Thesis & Dissertation Consultancy.
           </CardTitle>
         </CardHeader>
       </Card>
 
       {/* Service Box 3 */}
-      <Card className="flex flex-col justify-center h-full group hover:shadow-2xl transition-all duration-300 border-2 hover:border-pink-500 bg-white overflow-hidden p-6 md:p-8 rounded-2xl">
-        <CardHeader className="p-0 flex flex-row items-start gap-5">
-          <div className="p-3 bg-pink-50 text-pink-600 rounded-xl group-hover:scale-110 group-hover:bg-pink-600 group-hover:text-white transition-all duration-300 shadow-sm flex-shrink-0">
-            <Microscope className="w-8 h-8" />
+      <Card className="flex flex-col justify-center h-full group hover:shadow-2xl transition-all duration-300 border-2 hover:border-green-500 bg-white overflow-hidden p-6 rounded-2xl">
+        <CardHeader className="p-0 flex flex-row items-center gap-4">
+          <div className="p-3 bg-green-50 text-green-600 rounded-xl group-hover:scale-110 group-hover:bg-green-600 group-hover:text-white transition-all duration-300 shadow-sm flex-shrink-0">
+            <Shield className="w-6 h-6" />
           </div>
-          <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900 m-0 leading-tight transition-colors duration-200 group-hover:text-pink-600">
-            Research Mentorship & Methodology Guidance.
+          <CardTitle className="text-lg md:text-xl font-semibold text-gray-900 m-0 leading-snug transition-colors duration-200 group-hover:text-green-600">
+            IPR Support (National & International).
           </CardTitle>
         </CardHeader>
       </Card>
 
       {/* Service Box 4 */}
-      <Card className="flex flex-col justify-center h-full group hover:shadow-2xl transition-all duration-300 border-2 hover:border-green-500 bg-white overflow-hidden p-6 md:p-8 rounded-2xl">
-        <CardHeader className="p-0 flex flex-row items-start gap-5">
-          <div className="p-3 bg-green-50 text-green-600 rounded-xl group-hover:scale-110 group-hover:bg-green-600 group-hover:text-white transition-all duration-300 shadow-sm flex-shrink-0">
-            <Shield className="w-8 h-8" />
-          </div>
-          <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900 m-0 leading-tight transition-colors duration-200 group-hover:text-green-600">
-            IPR & Innovation Support
-          </CardTitle>
-        </CardHeader>
-      </Card>
-
-      {/* Service Box 5 */}
-      <Card className="md:col-span-2 md:max-w-2xl md:mx-auto w-full flex flex-col justify-center h-full group hover:shadow-2xl transition-all duration-300 border-2 hover:border-indigo-500 bg-white overflow-hidden p-6 md:p-8 rounded-2xl">
-        <CardHeader className="p-0 flex flex-row items-start gap-5">
+      <Card className="flex flex-col justify-center h-full group hover:shadow-2xl transition-all duration-300 border-2 hover:border-indigo-500 bg-white overflow-hidden p-6 rounded-2xl">
+        <CardHeader className="p-0 flex flex-row items-center gap-4">
           <div className="p-3 bg-indigo-50 text-indigo-600 rounded-xl group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 shadow-sm flex-shrink-0">
-            <Sparkles className="w-8 h-8" />
+            <Sparkles className="w-6 h-6" />
           </div>
-          <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900 m-0 leading-tight transition-colors duration-200 group-hover:text-indigo-600">
-            Research Training & Scholarly Programs
+          <CardTitle className="text-lg md:text-xl font-semibold text-gray-900 m-0 leading-snug transition-colors duration-200 group-hover:text-indigo-600">
+            Research Training & Scholarly Programs.
           </CardTitle>
         </CardHeader>
       </Card>
@@ -729,99 +716,93 @@ function Slider() {
   </div>
 </section>
 
+<section className="pt-8 pb-20 bg-gradient-to-br from-gray-50 to-gray-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+    {/* Heading */}
+    <div className="text-center mb-16">
+      <h2 className="text-6xl test-bold font-semibold text-gray-900">
+        Our Process
+      </h2>
+      <p className="mt-4 text-lg text-black-600 italic">
+        A Structured Pathway from Concept to Credibility
+      </p>
+    </div>
 
-        <section className="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Timeline */}
+    <div className="relative">
 
-            {/* Heading */}
-            <div className="text-center mb-16">
-              <h2 className="text-6xl test-bold font-semibold text-gray-900">
-                Our Process
-              </h2>
-              <p className="mt-4 text-lg text-black-600 italic">
-                A Structured Pathway from Concept to Credibility
-              </p>
-              {/* <p className="mt-4 text-black max-w-2xl mx-auto">
-                We follow a transparent, methodical framework to ensure your research and innovation journey
-                is guided with integrity, precision, and impact.
-              </p> */}
-            </div>
+      {/* Horizontal Line (Desktop Only) */}
+      <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-gray-200"></div>
 
-            {/* Timeline */}
-            <div className="relative">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
 
-              {/* Horizontal Line (Desktop Only) */}
-              <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-gray-200"></div>
-
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
-
-                {/* Step 1 */}
-                <div className="text-center relative">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-semibold relative z-10">
-                    01
-                  </div>
-                  <h3 className="mt-6 font-bold text-black-900 text-xl">
-                    Discovery & Consultation
-                  </h3>
-                  <p className="mt-3 text-black-600 text-m leading-relaxed">
-                    Initial assessment of research goals, innovation stage, and publication needs.
-                  </p>
-                </div>
-
-                {/* Step 2 */}
-                <div className="text-center relative">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-semibold relative z-10">
-                    02
-                  </div>
-                  <h3 className="mt-6 font-bold text-black-900 text-xl">
-                    Strategic Planning & Structuring
-                  </h3>
-                 <p className="mt-3 text-black-600 text-m leading-relaxed">
-                    Tailored strategy for drafting, patent planning, or journal targeting.
-                  </p>
-                </div>
-
-                {/* Step 3 */}
-                <div className="text-center relative">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-semibold relative z-10">
-                    03
-                  </div>
-                  <h3 className="mt-6 font-bold text-black-900 text-xl">
-                    Expert Execution & Quality Review
-                  </h3>
-                  <p className="mt-3 text-black-600 text-m leading-relaxed">
-                    Drafting, editing, and rigorous review by our subject experts.
-                  </p>
-                </div>
-
-                {/* Step 4 */}
-                <div className="text-center relative">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-semibold relative z-10">
-                    04
-                  </div>
-                  <h3 className="mt-6 font-bold text-black-900 text-xl">
-                    Submission & Dissemination
-                  </h3>
-                  <p className="mt-3 text-black-600 text-m leading-relaxed">
-                    Journal submission, patent filing, and knowledge sharing.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-            {/* Bottom Statement */}
-            <div className="mt-20 border-t pt-8 text-center">
-              <p className="text-black-700">
-                Every project is handled with strict <span className="font-semibold">confidentiality</span>,
-                <span className="font-semibold"> ethical transparency</span>, and
-                <span className="font-semibold"> academic compliance</span>.
-              </p>
-            </div>
-
+        {/* Step 1 */}
+        <div className="text-center relative">
+          <div className="w-16 h-16 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-semibold relative z-10">
+            01
           </div>
-        </section>
+          <h3 className="mt-6 font-bold text-black-900 text-xl">
+            Discovery & Consultation
+          </h3>
+          <p className="mt-3 text-black-600 text-m leading-relaxed">
+            {/* Initial assessment of research goals, innovation stage, and publication needs. */}
+          </p>
+        </div>
+
+        {/* Step 2 */}
+        <div className="text-center relative">
+          <div className="w-16 h-16 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-semibold relative z-10">
+            02
+          </div>
+          <h3 className="mt-6 font-bold text-black-900 text-xl">
+            Strategic Planning & Structuring
+          </h3>
+          <p className="mt-3 text-black-600 text-m leading-relaxed">
+            {/* Tailored strategy for drafting, patent planning, or journal targeting. */}
+          </p>
+        </div>
+
+        {/* Step 3 */}
+        <div className="text-center relative">
+          <div className="w-16 h-16 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-semibold relative z-10">
+            03
+          </div>
+          <h3 className="mt-6 font-bold text-black-900 text-xl">
+            Expert Execution & Quality Review
+          </h3>
+          <p className="mt-3 text-black-600 text-m leading-relaxed">
+            {/* Drafting, editing, and rigorous review by our subject experts. */}
+          </p>
+        </div>
+
+        {/* Step 4 */}
+        <div className="text-center relative">
+          <div className="w-16 h-16 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center text-xl font-semibold relative z-10">
+            04
+          </div>
+          <h3 className="mt-6 font-bold text-black-900 text-xl">
+            Submission & Dissemination
+          </h3>
+          <p className="mt-3 text-black-600 text-m leading-relaxed">
+            {/* Journal submission, patent filing, and knowledge sharing. */}
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    {/* Bottom Statement */}
+    <div className="mt-20 border-t pt-8 text-center">
+      <p className="text-black-700">
+        Every project is handled with strict <span className="font-semibold">confidentiality</span>,
+        <span className="font-semibold"> ethical transparency</span>, and
+        <span className="font-semibold"> academic compliance</span>.
+      </p>
+    </div>
+
+  </div>
+</section>
 
         {/* Testimonials Section */}
         {/* <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -987,7 +968,7 @@ function Slider() {
             Peer-reviewed journal publishing research and review articles in health sciences and interdisciplinary fields.
           </p>
         </div>
-        <Link href="https://wa.me/917068507857?text=Hello,%20I%20want%20to%20explore%20more%20about%20Journal%20of%20Health%20Synapse." target="_blank" rel="noopener noreferrer">
+        <Link href="https://healthsynapse.org" target="_blank" rel="noopener noreferrer">
           <Button variant="ghost" className="text-sm font-semibold text-purple-600 hover:text-purple-700 p-0 w-fit flex items-center gap-1.5 mt-auto">
             Explore More <ArrowRight className="w-4 h-4" />
           </Button>
@@ -1002,7 +983,7 @@ function Slider() {
             International scholarly journal promoting original research and advancements in pharmacy and life sciences.
           </p>
         </div>
-        <Link href="https://wa.me/917068507857?text=Hello,%20I%20want%20to%20explore%20more%20about%20IJRDPL." target="_blank" rel="noopener noreferrer">
+        <Link href="https://www.ijrdpl.com/index.php/ijrdpl" target="_blank" rel="noopener noreferrer">
           <Button variant="ghost" className="text-sm font-semibold text-purple-600 hover:text-purple-700 p-0 w-fit flex items-center gap-1.5 mt-auto">
             Explore More <ArrowRight className="w-4 h-4" />
           </Button>
@@ -1017,7 +998,7 @@ function Slider() {
             Academic publishing platform offering peer review, ISBN allocation, and end-to-end scholarly book publication support.
           </p>
         </div>
-        <Link href="https://wa.me/917068507857?text=Hello,%20I%20want%20to%20explore%20more%20about%20Scriptoria%20Publications." target="_blank" rel="noopener noreferrer">
+        <Link href="https://scriptoriapublicationhouse.com/" target="_blank" rel="noopener noreferrer">
           <Button variant="ghost" className="text-sm font-semibold text-purple-600 hover:text-purple-700 p-0 w-fit flex items-center gap-1.5 mt-auto">
             Explore More <ArrowRight className="w-4 h-4" />
           </Button>
@@ -1047,7 +1028,7 @@ function Slider() {
             Digital magazine showcasing research highlights, innovations, expert insights, and academic achievements.
           </p>
         </div>
-        <Link href="https://wa.me/917068507857?text=Hello,%20I%20want%20to%20explore%20more%20about%20Universal%20E-Magazine." target="_blank" rel="noopener noreferrer">
+        <Link href="https://scriptoriapublicationhouse.com/magazine" target="_blank" rel="noopener noreferrer">
           <Button variant="ghost" className="text-sm font-semibold text-purple-600 hover:text-purple-700 p-0 w-fit flex items-center gap-1.5 mt-auto">
             Explore More <ArrowRight className="w-4 h-4" />
           </Button>
@@ -1300,8 +1281,7 @@ function Slider() {
                     Journal submission, patent filing, and knowledge sharing.
                   </p>
                 </div> */}
-{/* 
-              </div>
+{/* </div>
             </div> */}
 
             {/* Bottom Statement */}
