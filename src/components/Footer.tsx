@@ -17,7 +17,7 @@ export function Footer() {
               <Link href="/">
               <div className="relative w-32 h-32 overflow-hidden">
                 <Image
-                  src="/logo_new.jpeg"
+                  src="/logo sc.png"
                   alt="ScientisticEra Logo"
                   fill
                   className="object-cover"
@@ -151,7 +151,7 @@ export function Footer() {
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
                 <div className="text-gray-300 text-sm">
-                  <Link href="https://wa.me/917068507857" target="_blank">
+                  <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
                     <p>+91 7068507857</p>
                   </Link>
                 </div>

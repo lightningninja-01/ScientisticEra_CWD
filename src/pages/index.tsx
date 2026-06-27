@@ -1013,7 +1013,7 @@ export default function Home() {
             Recognition initiative honoring excellence and contributions of researchers and academicians.
           </p>
         </div>
-        <Link href="https://wa.me/917068507857?text=Hello,%20I%20want%20to%20explore%20more%20about%20ScientisticEra%20Awards." target="_blank" rel="noopener noreferrer">
+        <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer">
           <Button variant="ghost" className="text-sm font-semibold text-purple-600 hover:text-purple-700 p-0 w-fit flex items-center gap-1.5 mt-auto">
             Explore More <ArrowRight className="w-4 h-4" />
           </Button>
@@ -1116,6 +1116,34 @@ export default function Home() {
           </div> */} 
         {/* </section> */}
 
+    <section className="py-12 bg-white border-y border-gray-100">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p className="text-xl md:text-2xl font-semibold text-gray-800 mb-8">
+      Supported by
+    </p>
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
+      
+      {/* DPIIT Logo Container */}
+      <div className="flex h-40 w-full max-w-md items-center justify-center rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md cursor-pointer">
+        <img 
+          src="/dpiit_logo.png" 
+          alt="DPIIT supporting organization logo" 
+          className="max-h-32 max-w-full object-contain" 
+        />
+      </div>
+      
+      {/* MSME Logo Container */}
+      <div className="flex h-40 w-full max-w-md items-center justify-center rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-md cursor-pointer">
+        <img 
+          src="/msme_logo.jpeg" 
+          alt="MSME supporting organization logo" 
+          className="max-h-32 max-w-full object-contain" 
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
     <section className="py-12 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -1361,7 +1389,7 @@ export default function Home() {
               </CardHeader>
               <CardContent className="text-center pb-8">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href= "https://wa.me/917068507857" target="_blank">
+                  <Link href= "https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
                     <Button size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-blue-600 hover:bg-gray-100">
                       Get Started Today
                     </Button>

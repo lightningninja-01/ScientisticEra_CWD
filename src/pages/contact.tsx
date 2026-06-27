@@ -171,7 +171,7 @@ export default function Contact() {
   
   {/* Added WhatsApp wa.me link with target="_blank" to open in a new tab/app */}
   <a 
-    href="https://wa.me/917068507857" 
+    href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." 
     target="_blank"
     rel="noopener noreferrer"
     className="text-green-600 font-bold text-sm hover:underline block break-all"

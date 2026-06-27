@@ -124,7 +124,7 @@ const iprServices = [
                   <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8">  
                   Intellectual Property Protection & Commercialization Services                   </p>
                   <p className="text-m mb-5">Securing innovation for researchers, startups and institutions.</p>
-                  <Link href="https://wa.me/917068507857"target="_blank">
+                  <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services."target="_blank">
                     <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100 font-bold px-8">
                       Get IPR Consultation
                     </Button>
@@ -448,7 +448,7 @@ const iprServices = [
 
     {/* Button */}
     <div className="flex justify-center">
-      <Link href="https://wa.me/917068507857" target="_blank">
+      <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
       <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg rounded-lg shadow-md">
         Schedule a Free Consultation
       </Button>

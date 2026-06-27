@@ -41,7 +41,7 @@ From Idea to Indexed Publication - We Handle the Complexity, You Focus on Resear
 {/* Buttons */}
 <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
 
-<Link href="https://wa.me/917068507857" target="_blank">
+<Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
 <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white font-semibold shadow-lg hover:scale-105 transition duration-300">
 Book Consultation
 </button>
@@ -271,7 +271,7 @@ Start Your Publication Journey →
       </span>
     </p>
 
-    <Link href="https://wa.me/917068507857" target="_blank">
+    <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
       <button className="mt-4 w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
         Start Your Publication Journey →
       </button>
@@ -690,7 +690,7 @@ Viva Preparation Support
 
 <div className="mt-8">
 
-<Link href="https://wa.me/917068507857" target="_blank">
+<Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
 <button className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
 Book Consultation →
 </button>

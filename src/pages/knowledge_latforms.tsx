@@ -118,7 +118,7 @@ export default function KnowledgePlatforms() {
               <li>• Academic insights and commentary</li>
               <li>• Knowledge sharing across disciplines</li>
             </ul>
-            <Link href="https://wa.me/917068507857" target="_blank">
+            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
               <button className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                 Read the Magazine →
               </button>
@@ -160,7 +160,7 @@ export default function KnowledgePlatforms() {
               <li>• Opportunities for emerging researchers and scholars</li>
               <li>• Global visibility within the academic community</li>
             </ul>
-            <Link href="https://wa.me/917068507857">
+            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services.">
               <button className="mt-8 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
                 Explore the Awards →
               </button>

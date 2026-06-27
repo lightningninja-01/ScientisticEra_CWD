@@ -87,7 +87,7 @@ export default function Webinars() {
               </div> */}
 
               {/* Register Button - full width on mobile, capped on desktop */}
-              <Link href="https://wa.me/917068507857" target="_blank">
+              <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
                 <Button
                   // onClick={() => window.open("https://forms.gle/WzHLKQEkhTVWWvSy5", "_blank")}
                   size="lg"
@@ -132,7 +132,7 @@ export default function Webinars() {
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8">
               Share your expertise with our global community of researchers and academicians
             </p>
-            <Link href="https://wa.me/917068507857" target="_blank">
+            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
               <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 font-bold px-6 sm:px-8">
                 Become a Speaker
               </Button>

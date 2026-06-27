@@ -11,7 +11,16 @@ export function Header() {
 
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/our-about" },
+    {
+      name: "About",
+      href: "/about-vision-mission",
+      dropdown: [
+        { name: "Vision & Mission", href: "/about-vision-mission" },
+        { name: "Our Founder", href: "/about-founder" },
+        { name: "Our Team", href: "/about-team" },
+        { name: "Our Partner", href: "/about-partner" },
+      ],
+    },
     {
       name: "Services",
       href: "/services",
@@ -28,7 +37,7 @@ export function Header() {
     { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "/contact" },
     // Added isButton property to differentiate this link
-{ name: "Book Free Consultant", href: "https://wa.me/917068507857", target: "_blank", isButton: true },
+{ name: "Book Free Consultant", href: "https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services.", target: "_blank", isButton: true },
   ];
 
   const isActive = (path) => router.pathname === path;

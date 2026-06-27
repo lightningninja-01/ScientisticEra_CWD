@@ -86,12 +86,12 @@ export default function JournalHealthSynapse() {
             spectrum of health sciences.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
-            <Link href="https://wa.me/917068507857"target="_blank">
+            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services."target="_blank">
               <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:scale-105 transition">
                 Submit Article
               </button>
             </Link>
-            <Link href="https://wa.me/917068507857" target="_blank">
+            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
               <button className="px-8 py-4 rounded-xl border-2 border-purple-500 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition">
                 Visit Journal Website
               </button>
@@ -229,7 +229,7 @@ export default function JournalHealthSynapse() {
                 Submit Your Manuscript
               </button>
             </Link>
-            <Link href="https://wa.me/917068507857" target="_blank">
+            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
               <button className="px-8 py-4 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
                 Get a Free Consultation
               </button>

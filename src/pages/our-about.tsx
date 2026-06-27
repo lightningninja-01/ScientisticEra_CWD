@@ -46,12 +46,12 @@ export default function OurStory() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 pt-40 pb-28 mb-10">
 
-          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight pt-10">
+          {/* <h1 className="text-3xl md:text-5xl font-extrabold leading-tight pt-10">
             Pioneering Research Excellence
             <span className="text-blue-400">
               <br /> Since Inception
             </span>
-          </h1>
+          </h1> */}
 
           {/* <p className="mt-6 text-lg text-gray-300 max-w-3xl">
            We are India’s premier research publication house, dedicated to empowering researchers worldwide with ethical publication practices, expert guidance, and comprehensive academic services.
@@ -62,11 +62,11 @@ export default function OurStory() {
       </section>
 
 {/* Story Section - Keep Justified for readability */}
-<section className="py-16 max-w-4xl mx-auto px-6 text-center">
+{/* <section className="py-16 max-w-4xl mx-auto px-6 text-center">
   <p className="text-gray-800 leading-relaxed text-xl text-justify">
     Scientistic Era Pvt. Ltd. is one of India’s leading research publication and academic consultancy organizations, committed to empowering researchers globally through ethical publication practices, expert mentorship, innovative research support, and comprehensive academic services.
   </p>
-</section>
+</section> */}
 
 {/* Mission & Vision Section */}
 <section className="py-10 px-6">
@@ -501,7 +501,7 @@ Strategic Partnerships & Academic Collaborations
 <p className="mt-6 text-gray-600 max-w-3xl mx-auto text-lg">
 Building a strong global research ecosystem through institutional, publishing, and industry alliances.
 </p>
-<Link href="https://wa.me/917068507857" target="_blank">
+<Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
 <button className="mt-8 bg-[#0f1f3d] text-white px-8 py-3 rounded-lg hover:bg-[#162a4d] transition">
 Become a Partner
 </button></Link>
@@ -911,7 +911,7 @@ Together we can strengthen global research visibility, protect intellectual prop
 Join our growing network of academic institutions, journals, and innovation partners shaping the future of global research.
 </p>
 
-<Link href="https://wa.me/917068507857">
+<Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services.">
 <button className="bg-white text-[#0f1f3d] font-semibold px-10 py-4 rounded-xl shadow-xl hover:scale-110 hover:bg-gray-100 transition duration-300 flex items-center gap-2 mx-auto">
 
 Start Partnership →

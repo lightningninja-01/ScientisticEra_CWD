@@ -21,7 +21,7 @@ export default function CollaborationSupport() {
           </p>
 
           <div className="mt-10">
-            <Link href="https://wa.me/917068507857" target="_blank">
+            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
               <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:scale-105 transition">
                 Partner With Us
               </button>
