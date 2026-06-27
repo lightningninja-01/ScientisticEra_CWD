@@ -165,7 +165,7 @@ export default function AboutFounder() {
                   aria-label="LinkedIn profile"
                 >
                   <img
-                    src="/LinkedIn_Logo.webp"
+                    src="/linkedin_logo.webp"
                     alt="LinkedIn"
                     className="h-6 w-6 object-contain"
                   />
@@ -179,7 +179,7 @@ export default function AboutFounder() {
                   aria-label="Google Scholar profile"
                 >
                   <img
-                    src="/Google_Scholar_Logo.png"
+                    src="/Google_Scholar_logo.png"
                     alt="Google Scholar"
                     className="h-7 w-7 object-contain"
                   />
@@ -193,7 +193,7 @@ export default function AboutFounder() {
                   aria-label="ResearchGate profile"
                 >
                   <img
-                    src="/ResearchGate_Logo.png"
+                    src="/ResearchGate_logo.png"
                     alt="ResearchGate"
                     className="h-7 w-7 object-contain"
                   />
