@@ -18,7 +18,7 @@ export function Header() {
         { name: "Vision & Mission", href: "/about-vision-mission" },
         { name: "Our Founder", href: "/about-founder" },
         { name: "Our Team", href: "/about-team" },
-        { name: "Our Partner", href: "/about-partner" },
+        // { name: "Our Partner", href: "/about-partner" },
       ],
     },
     {
