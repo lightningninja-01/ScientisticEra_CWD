@@ -341,6 +341,12 @@ export default function OurStory() {
             <p>
               His active involvement in more than 70 national and international conferences, seminars, and workshops reflects his strong commitment to scientific advancement, societal development, and national sustainable growth.
             </p>
+            
+            <div className="pt-4 text-left">
+              <Link href="/about-founder#founder-achievements" className="inline-flex items-center text-blue-600 font-semibold hover:underline">
+                View Detailed Achievements & Certificates →
+              </Link>
+            </div>
 
             </div>
 

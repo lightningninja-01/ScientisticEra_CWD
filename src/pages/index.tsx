@@ -114,7 +114,8 @@ export default function Home() {
 
   const gallerySlides = [
     { src: "/Gallery-1.jpg", alt: "Gallery Exhibition 1" },
-    { src: "/about1.png", alt: "Scientistic Era Corporate Presentation" }
+    { src: "/Gallery-2.jpg", alt: "Gallery Exhibition 2" },
+    { src: "/Gallery-3.jpg", alt: "Gallery Exhibition 3" }
   ];
 
   useEffect(() => {
@@ -1038,83 +1039,7 @@ export default function Home() {
     </div>
   </div>
 </section>
-        {/* <section className="py-20 px-4 bg-gradient-to-br from-blue-500 via-purple-600 to-pink-600 relative overflow-hidden">
-          {/* Decorative background elements */}
-          {/* <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-            <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-300 rounded-full blur-3xl"></div>
-          </div>
 
-          <div className="container mx-auto max-w-6xl relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-                Why Choose Us
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="bg-white/95 backdrop-blur border-2 border-white/50 hover:border-white hover:shadow-2xl transition-all group">
-                <CardContent className="p-8 text-center">
-                  {/* <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Award className="w-10 h-10 text-white" />
-                  </div> */}
-                  {/* <h3 className="text-xl font-bold text-gray-900 mb-3">Research Integrity</h3>
-                  <p className="text-gray-700">
-                    We uphold the highest standards of academic ethics, originality, and compliance. Every manuscript, patent draft, and submission is handled with precision and responsibility.
-                  </p>
-                </CardContent>
-              </Card> */}
-
-              {/* <Card className="bg-white/95 backdrop-blur border-2 border-white/50 hover:border-white hover:shadow-2xl transition-all group">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Expert-Led Academic & IPR Consultancy</h3>
-                  <p className="text-gray-700">
-                    Our team of experienced researchers, editors, and intellectual property professionals provides domain-specific guidance aligned with current scholarly and regulatory standards.
-                  </p>
-                </CardContent>
-              </Card> */}
-
-              {/* <Card className="bg-white/95 backdrop-blur border-2 border-white/50 hover:border-white hover:shadow-2xl transition-all group">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">End-to-End Research & Patent Support</h3>
-                  <p className="text-gray-700">
-                    From idea refinement and manuscript development to patent drafting, filing assistance, and publication strategy — we offer complete lifecycle support under one roof.
-                  </p>
-                </CardContent>
-              </Card> */}
-
-              {/* <Card className="bg-white/95 backdrop-blur border-2 border-white/50 hover:border-white hover:shadow-2xl transition-all group">
-                <CardContent className="p-8 text-center">
-
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Journal Targeting & Indexing Advisory</h3>
-                  <p className="text-gray-700">
-                    We assist in identifying suitable indexed journals and credible publication platforms to enhance research visibility and academic impact.
-                  </p>
-                </CardContent>
-              </Card> */}
-
-              {/* <Card className="bg-white/95 backdrop-blur border-2 border-white/50 hover:border-white hover:shadow-2xl transition-all group">
-                <CardContent className="p-8 text-center">
-
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Structured & Transparent Workflow</h3>
-                  <p className="text-gray-700">
-                    Clear timelines, milestone-based execution, and consistent communication ensure accountability and clarity at every stage of engagement.
-                  </p>
-                </CardContent>
-              </Card> */}
-
-              {/* <Card className="bg-white/95 backdrop-blur border-2 border-white/50 hover:border-white hover:shadow-2xl transition-all group">
-                <CardContent className="p-8 text-center">
-
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Time-Bound Delivery with Expert Review</h3>
-                  <p className="text-gray-700">
-                    Efficient turnaround supported by professional review and expert feedback, enabling timely submissions without compromising quality.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div> */} 
-        {/* </section> */}
 
     <section className="py-12 bg-white border-y border-gray-100">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1144,6 +1069,59 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+    {/* Testimonials Section */}
+    <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 border-t border-b border-gray-100">
+      <div className="max-w-4xl mx-auto px-4 text-center">
+        <Badge className="bg-purple-100 text-purple-700 px-4 py-1.5 text-sm font-semibold uppercase tracking-wider mb-6 rounded-full">
+          Testimonials
+        </Badge>
+        <h2 className="text-3xl md:text-5xl font-bold mb-10 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-tight">
+          What Researchers Say About Us
+        </h2>
+
+        <Card className="border-none shadow-2xl bg-white/80 backdrop-blur p-8 md:p-12 rounded-3xl relative overflow-hidden">
+          <div className="absolute top-4 left-6 text-7xl text-gray-200/50 font-serif pointer-events-none select-none">“</div>
+          <div className="relative z-10">
+            <p className="text-xl md:text-2xl text-gray-700 italic font-medium leading-relaxed mb-8 transition-all duration-500">
+              "{testimonials[currentIndex].text}"
+            </p>
+            
+            <div className="flex justify-center gap-1.5 mb-6">
+              {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+              ))}
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center text-white text-xl font-bold mb-3 shadow-md">
+                {testimonials[currentIndex].name[0]}
+              </div>
+              <h4 className="text-xl font-bold text-gray-900">
+                {testimonials[currentIndex].name}
+              </h4>
+              <p className="text-sm text-gray-500 font-medium mt-1">
+                {testimonials[currentIndex].role}
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        <div className="flex justify-center gap-3 mt-8">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentIndex(i)}
+              className={`w-3.5 h-3.5 rounded-full transition-all duration-300 ${
+                currentIndex === i ? "bg-purple-600 scale-125 shadow-md shadow-purple-600/30" : "bg-gray-300 hover:bg-gray-400"
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
     <section className="py-12 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -1325,55 +1303,7 @@ export default function Home() {
         </section> */}
 
 
-        {/* ========================== */}
-        {/* Testimonials Section */}
-        {/* <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              What Researchers Say About Us
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Success stories from our community of researchers and academics
-            </p>
-          </div>
-          <div className="relative max-w-3xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
-                <Users className="w-8 h-8" />
-              </div>
 
-              <div className="text-left">
-                <h4 className="text-2xl font-bold text-gray-900">
-                  {testimonials[currentIndex].name}
-                </h4>
-                <p className="text-sm text-gray-600">
-                  {testimonials[currentIndex].role}
-                </p>
-              </div>
-
-            </div>
-            <div className="flex justify-center gap-1 mb-4">
-              {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-              ))}
-            </div>
-
-            <p className="text-xl md:text-2xl text-gray-600 italic transition-all duration-500">
-              "{testimonials[currentIndex].text}"
-            </p>
-
-            <div className="flex justify-center gap-3 mt-6">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentIndex(i)}
-                  className={`w-4 h-4 rounded-full transition-all ${currentIndex === i ? "bg-cyan-500 scale-110" : "bg-gray-300"
-                    }`}
-                />
-              ))}
-            </div>
-          </div>
-        </section> */}
 
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -1389,7 +1319,7 @@ export default function Home() {
               </CardHeader>
               <CardContent className="text-center pb-8">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href= "https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
+                  <Link href="/contact">
                     <Button size="lg" variant="secondary" className="text-lg px-8 py-6 bg-white text-blue-600 hover:bg-gray-100">
                       Get Started Today
                     </Button>

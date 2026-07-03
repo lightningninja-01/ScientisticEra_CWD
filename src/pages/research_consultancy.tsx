@@ -18,13 +18,7 @@ export default function Team() {
 
 <div className="max-w-6xl mx-auto px-6">
 
-{/* Badge */}
-<div className="flex justify-center mb-6">
-<span className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium shadow-lg">
-  <Zap size={28} />
-  Comprehensive Research Solutions
-</span>
-</div>
+
 
 {/* Heading */}
 <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-[1.3] pb-2">
@@ -80,20 +74,18 @@ Most Popular Service
   </div>
 
   <h2 className="text-3xl font-bold">
-    Research Paper Publication
+    Article Paper
   </h2>
 
 </div>
 
 <p className="mt-4 text-blue-100 leading-relaxed">
-Your breakthrough research deserves recognition in prestigious,
-peer-reviewed journals. We guide you through every step of the
-publication journey with expert support and ethical practices.
+We provide end-to-end manuscript writing assistance for research articles, reviews, case reports, and book chapters. Our experts help improve scientific quality, readability, and journal compliance, enabling researchers to communicate their work effectively.
 </p>
 
 <ul className="mt-6 space-y-3 text-blue-100">
 
-<li>✔ 200+ Research Articles Supported</li>
+<li>✔ 200+ Manuscripts Prepared</li>
 
 <li>✔ SCI / Scopus / UGC Indexed Journal Expertise</li>
 
@@ -267,7 +259,7 @@ Start Your Publication Journey →
     <p className="text-sm text-gray-500">
       Average Publication Time:
       <span className="text-blue-600 font-semibold ml-2">
-        30-60 Days
+        1 month to 1 year
       </span>
     </p>
 
@@ -283,6 +275,45 @@ Start Your Publication Journey →
 </div>
 </section>
 
+{/* Sliding Journals Marquee */}
+<section className="py-12 bg-gray-100 overflow-hidden border-y border-gray-200">
+  <div className="max-w-7xl mx-auto px-6 text-center">
+    <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-6">
+      Supporting Publications in Reputed Journals
+    </p>
+    <div className="overflow-hidden relative group">
+      <div className="flex w-max gap-8 animate-marquee group-hover:[animation-play-state:paused]">
+        {[
+          "/SE_01.jpeg",
+          "/SE_02.jpeg",
+          "/SE_03.jpeg",
+          "/SE_04.jpeg",
+          "/SE_05.jpeg",
+          "/SE_06.jpeg",
+          "/SE_07.jpeg"
+        ].map((img, i) => (
+          <div key={i} className="w-40 h-52 overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300 hover:scale-105 bg-white p-2 flex-shrink-0">
+            <img src={img} className="w-full h-full object-contain" alt={`Journal Cover ${i + 1}`} />
+          </div>
+        ))}
+        {/* Duplicate for smooth infinite scroll */}
+        {[
+          "/SE_01.jpeg",
+          "/SE_02.jpeg",
+          "/SE_03.jpeg",
+          "/SE_04.jpeg",
+          "/SE_05.jpeg",
+          "/SE_06.jpeg",
+          "/SE_07.jpeg"
+        ].map((img, i) => (
+          <div key={`dup-${i}`} className="w-40 h-52 overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300 hover:scale-105 bg-white p-2 flex-shrink-0">
+            <img src={img} className="w-full h-full object-contain" alt={`Journal Cover ${i + 1}`} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
 <section className="py-24 bg-gray-50">
 
@@ -478,9 +509,6 @@ Schedule a Consultation →
 
 <div className="text-center mb-16">
 
-<span className="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm font-medium">
-PhD & Master's Students
-</span>
 
 <h2 className="mt-4 text-3xl md:text-5xl font-bold text-green-700">
 Thesis & Dissertation Complete Support
@@ -732,7 +760,7 @@ students and scholars at different stages of their thesis journey.
 
 {/* Grid */}
 
-<div className="grid md:grid-cols-2 gap-10">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
 {/* Foundation */}
@@ -840,44 +868,6 @@ End-to-end academic guidance from proposal to submission.
 </ul>
 
 </div>
-
-
-
-{/* Mentorship */}
-
-<div className="group bg-white p-8 rounded-2xl border border-gray-200 shadow-sm 
-hover:shadow-xl hover:-translate-y-2 transition duration-300">
-
-<div className="flex items-center gap-3 mb-5">
-
-<div className="w-12 h-12 flex items-center justify-center rounded-lg bg-pink-100 text-pink-600">
-<GraduationCap size={24}/>
-</div>
-
-<h3 className="text-xl font-bold">
-Doctoral Mentorship Program
-</h3>
-
-</div>
-
-<p className="text-gray-600 text-sm mb-6">
-Long-term academic mentorship for doctoral excellence.
-</p>
-
-<ul className="space-y-2 text-gray-700 text-sm">
-
-<li>✔ Monthly structured research review meetings</li>
-<li>✔ Personalized research roadmap</li>
-<li>✔ Publication extraction planning</li>
-<li>✔ Journal targeting & submission strategy</li>
-<li>✔ Continuous academic consultation</li>
-<li>✔ Priority response & advisory access</li>
-
-</ul>
-
-</div>
-
-
 </div>
 
 </div>

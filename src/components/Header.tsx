@@ -17,6 +17,7 @@ export function Header() {
       dropdown: [
         { name: "Vision & Mission", href: "/about-vision-mission" },
         { name: "Our Founder", href: "/about-founder" },
+        { name: "Founder's Achievements", href: "/about-founder#founder-achievements" },
         { name: "Our Team", href: "/about-team" },
         // { name: "Our Partner", href: "/about-partner" },
       ],
@@ -25,9 +26,8 @@ export function Header() {
       name: "Services",
       href: "/services",
       dropdown: [
-        { name: "Research Consultancy", href: "/research_consultancy" },
+        { name: "Manuscript Writing Assistance", href: "/research_consultancy" },
         { name: "Intellectual Property (IPR)", href: "/ipr" },
-        { name: "Academic Publishing", href: "/academic_publishing" },
         { name: "Other Pivotial Services", href: "/knowledge_latforms" },
         { name: "Collaboration & Institutional Support", href: "/collaboration" },
       ],

@@ -74,29 +74,52 @@ export default function JournalHealthSynapse() {
 
       <Header />
 
-      {/* HERO */}
-      <section className="py-28 bg-gray-100 text-center">
-        <div className="max-w-5xl mx-auto px-6">
-          <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-[1.3] pb-2">
-            Journal of Health Synapse
-          </h1>
-          <p className="mt-6 text-gray-700 text-lg max-w-3xl mx-auto">
-            JHS is an International, peer-reviewed, open-access scholarly journal committed to
-            advancing high-quality multidisciplinary and integrative research across the full
-            spectrum of health sciences.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
-            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services."target="_blank">
-              <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:scale-105 transition">
-                Submit Article
-              </button>
-            </Link>
-            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
-              <button className="px-8 py-4 rounded-xl border-2 border-purple-500 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition">
-                Visit Journal Website
-              </button>
-            </Link>
+      {/* HERO SECTION */}
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#0b1528] via-[#020b14] to-[#12071e] text-white overflow-hidden">
+        {/* Ambient background glows */}
+        <div className="absolute top-10 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 grid md:grid-cols-12 gap-12 items-center relative z-10">
+          
+          {/* Left Column: Text & Buttons */}
+          <div className="md:col-span-7 space-y-6 text-left">
+            <span className="inline-block bg-blue-500/20 text-blue-300 border border-blue-500/30 px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider">
+              Official Journal
+            </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
+              Journal of Health Synapse
+            </h1>
+            <p className="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-2xl">
+              JHS is an International, peer-reviewed, open-access scholarly journal committed to
+              advancing high-quality multidisciplinary and integrative research across the full
+              spectrum of health sciences.
+            </p>
+            <div className="pt-4 flex flex-wrap gap-4">
+              <Link href="https://healthsynapse.org/index.php/files/user/register" target="_blank" rel="noopener noreferrer">
+                <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:scale-105 hover:shadow-purple-600/20 transition shadow-lg">
+                  Register
+                </button>
+              </Link>
+              <Link href="https://healthsynapse.org/index.php/files" target="_blank" rel="noopener noreferrer">
+                <button className="px-8 py-4 rounded-xl border-2 border-purple-400/60 text-purple-300 font-semibold hover:bg-purple-600 hover:text-white hover:border-purple-600 transition shadow-md">
+                  Visit Journal Website
+                </button>
+              </Link>
+            </div>
           </div>
+
+          {/* Right Column: Image */}
+          <div className="md:col-span-5 w-full flex justify-center">
+            <div className="relative w-full max-w-md md:max-w-none group rounded-2xl overflow-hidden shadow-2xl border border-white/10 bg-white/5 p-2 backdrop-blur-sm transition-transform duration-500 hover:scale-[1.02]">
+              <img
+                src="/JournalOfHealthSynapse.jpeg"
+                alt="Journal of Health Synapse Cover"
+                className="w-full h-auto object-contain rounded-xl shadow-inner"
+              />
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -139,109 +162,9 @@ export default function JournalHealthSynapse() {
         </div>
       </section>
 
-      {/* EDITOR IN CHIEF */}
-      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-center text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Editor-in-Chief
-          </h2>
-          <div className="group bg-white rounded-3xl shadow-xl p-10 flex flex-col md:flex-row items-center gap-10 border border-gray-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-            <div className="flex-shrink-0">
-              <img
-                src="/team_01.png"
-                alt="Editor"
-                className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-full border-4 border-white shadow-xl group-hover:scale-110 transition duration-300"
-              />
-            </div>
-            <div className="text-center md:text-left space-y-4 text-lg">
-              <p>
-                <span className="font-semibold text-gray-900 text-xl">Name:</span>{" "}
-                <span className="text-gray-700">Dr. Sudhanshu Kumar Jha</span>
-              </p>
-              <p>
-                <span className="font-semibold text-gray-900 text-xl">Affiliation:</span>{" "}
-                <span className="text-gray-700">Founder, ScientisticEra Private Limited</span>
-              </p>
-              <p>
-                <span className="font-semibold text-gray-900 text-xl">Email:</span>{" "}
-                <a href="mailto:contact@scientisticera.com" className="text-blue-600 hover:underline">
-                  contact@scientisticera.com
-                </a>
-              </p>
-              <p>
-                <span className="font-semibold text-gray-900 text-xl">Profile:</span>{" "}
-                <a href="#" className="text-blue-600 hover:underline mr-3">Official Website</a>
-                <a href="#" className="text-blue-600 hover:underline mr-3">Google Scholar</a>
-                <a href="#" className="text-blue-600 hover:underline mr-3">ResearchGate</a>
-                <a href="#" className="text-blue-600 hover:underline">LinkedIn</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE */}
-      <section className="py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Why Choose Journal of Health Synapse
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              "Peer-Reviewed Publication Process ensuring academic quality and research integrity",
-              "Open Access Publishing Model allowing global access and wider visibility",
-              "ISSN-Registered Journal ensuring official recognition",
-              "Indexed in Reputable Databases for better discoverability",
-              "Multidisciplinary Scope across healthcare and medical disciplines",
-              "Transparent Editorial and Review Process",
-              "Platform for Researchers to share innovative ideas",
-            ].map((item, index) => (
-              <div key={index} className="flex gap-3 items-start">
-                <CheckCircle className="text-green-600 mt-1" />
-                <p className="text-gray-700">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SUBMISSION PROCESS */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-12">Submission Process</h2>
-          <div className="grid md:grid-cols-5 gap-6 text-sm">
-            {[
-              "Manuscript Submission",
-              "Editorial Screening",
-              "Peer Review",
-              "Revision & Acceptance",
-              "Online Publication",
-            ].map((step, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-sm">
-                <div className="text-blue-600 font-bold text-lg mb-2">{index + 1}</div>
-                <p className="text-gray-700">{step}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-5">
-            <Link href="https:///917068507857" >
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:scale-105 transition">
-                Submit Your Manuscript
-              </button>
-            </Link>
-            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
-              <button className="px-8 py-4 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">
-                Get a Free Consultation
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* ── LATEST ISSUES / ARTICLES ── */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
-
           <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent leading-[1.3] pb-2">
             Latest Issues / Articles
           </h2>
@@ -278,7 +201,72 @@ export default function JournalHealthSynapse() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
+      {/* EDITOR IN CHIEF */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-center text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Editor-in-Chief
+          </h2>
+          <div className="group bg-white rounded-3xl shadow-xl p-10 flex flex-col md:flex-row items-center gap-10 border border-gray-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+            <div className="flex-shrink-0">
+              <img
+                src="/founder_img.jpeg"
+                alt="Editor"
+                className="w-48 h-48 md:w-56 md:h-56 object-contain rounded-full border-4 border-white shadow-xl group-hover:scale-110 transition duration-300"
+              />
+            </div>
+            <div className="text-center md:text-left space-y-4 text-lg">
+              <p>
+                <span className="font-semibold text-gray-900 text-xl">Name:</span>{" "}
+                <span className="text-gray-700">Dr. Sudhanshu Kumar Jha</span>
+              </p>
+              <p>
+                <span className="font-semibold text-gray-900 text-xl">Affiliation:</span>{" "}
+                <span className="text-gray-700">Founder, ScientisticEra Private Limited</span>
+              </p>
+              <p>
+                <span className="font-semibold text-gray-900 text-xl">Email:</span>{" "}
+                <a href="mailto:contact@scientisticera.com" className="text-blue-600 hover:underline">
+                  contact@scientisticera.com
+                </a>
+              </p>
+              <p>
+                <span className="font-semibold text-gray-900 text-xl">Profile:</span>{" "}
+                <Link href="/about-founder" className="text-blue-600 hover:underline mr-3">Official Website</Link>
+                <a href="https://scholar.google.com/citations?user=T4dI270AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline mr-3">Google Scholar</a>
+                <a href="https://www.researchgate.net/profile/Sudhanshu-Kumar-Jha-2" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline mr-3">ResearchGate</a>
+                <a href="https://www.linkedin.com/in/sudhanshu-kumar-jha-ph-d-549472199/?originalSubdomain=in" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE */}
+      <section className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Choose Journal of Health Synapse
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              "Peer-Reviewed Publication Process ensuring academic quality and research integrity",
+              "Open Access Publishing Model allowing global access and wider visibility",
+              "ISSN-Registered Journal ensuring official recognition",
+              "Indexed in Reputable Databases for better discoverability",
+              "Multidisciplinary Scope across healthcare and medical disciplines",
+              "Transparent Editorial and Review Process",
+              "Platform for Researchers to share innovative ideas",
+            ].map((item, index) => (
+              <div key={index} className="flex gap-3 items-start">
+                <CheckCircle className="text-green-600 mt-1" />
+                <p className="text-gray-700">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

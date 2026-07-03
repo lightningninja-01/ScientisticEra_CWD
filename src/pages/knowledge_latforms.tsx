@@ -4,6 +4,58 @@ import Link from "next/link";
 import Image from "next/image";
 import { BookOpen, Award, Lightbulb, Play, Calendar, Presentation } from "lucide-react";
 
+const books = [
+  {
+    id: 1,
+    title: "Gastrointestinal Disorder: Ayurvedic Clinical Protocols & Evidence-Based Medicine",
+    color: "from-emerald-500 to-teal-700",
+    spine: "bg-emerald-800",
+  },
+  {
+    id: 2,
+    title: "Ayurvedic Principles and Modern Medicine in Pulmonary Health: Integrative Strategies for Prevention and Therapy",
+    color: "from-sky-500 to-blue-700",
+    spine: "bg-blue-900",
+  },
+  {
+    id: 3,
+    title: "Integrative Oncology: An Ayurveda Clinician's Perspective",
+    color: "from-violet-500 to-purple-700",
+    spine: "bg-purple-900",
+  },
+  {
+    id: 4,
+    title: "Disease Prediction and Healthcare Innovation: The Impact of AI, ML, and DL",
+    color: "from-orange-400 to-rose-600",
+    spine: "bg-rose-900",
+  },
+  {
+    id: 5,
+    title: "Integrative Oncology: Perspectives from Modern and Traditional Sciences",
+    color: "from-amber-400 to-orange-600",
+    spine: "bg-orange-900",
+  },
+];
+
+function BookCard({ book, index }) {
+  return (
+    <div className="flex items-stretch gap-0 rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+      <div className={`${book.spine} w-4 flex-shrink-0`} />
+      <div className={`bg-gradient-to-br ${book.color} p-4 flex-1 flex flex-col justify-between min-h-[90px]`}>
+        <span className="text-white/70 text-xs font-mono">#{String(index + 1).padStart(2, "0")}</span>
+        <p className="text-white text-sm font-semibold leading-snug mt-2 group-hover:text-white/90 transition">
+          {book.title}
+        </p>
+      </div>
+      <div className="flex flex-col gap-[2px] justify-center px-1 bg-gray-100">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <div key={i} className="w-3 h-[2px] bg-gray-300 rounded-full" />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function KnowledgePlatforms() {
   // Webinars Data Array
   const webinarsData = [
@@ -92,6 +144,48 @@ export default function KnowledgePlatforms() {
           <p className="mt-6 text-gray-700 text-lg max-w-3xl mx-auto">
             Empowering knowledge sharing, academic excellence, and innovation through our dedicated platforms for researchers, scholars, and professionals.
           </p>
+        </div>
+      </section>
+
+      {/* BOOK PUBLISHING SECTION - 1st Position */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-medium">
+              Academic Publishing House
+            </span>
+            <h2 className="text-3xl font-bold mt-6 mb-6 text-gray-900">Scholarly Book Publishing</h2>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Supporting researchers, academicians, and subject experts in publishing high-quality
+              scholarly books and edited volumes through a professional academic publishing process.
+            </p>
+            <ul className="space-y-3 text-gray-700 mb-6">
+              <li>✔ Academic book publishing for researchers and faculty</li>
+              <li>✔ Edited volumes and multi-author books</li>
+              <li>✔ Conference proceedings publication</li>
+              <li>✔ ISBN allocation and copyright support</li>
+              <li>✔ Professional editing, formatting, and typesetting</li>
+              <li>✔ Print and digital publication options</li>
+            </ul>
+            <p className="mt-6 text-sm text-gray-500">
+              Our books are published through our dedicated academic publishing division (Scriptoria Publications), ensuring
+              professional editorial standards and global academic visibility.
+            </p>
+            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
+              <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-semibold">
+                Explore Our Publishing House →
+              </button>
+            </Link>
+          </div>
+
+          <div className="flex flex-col gap-3">
+            <p className="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-1">
+              Our Published Titles
+            </p>
+            {books.map((book, i) => (
+              <BookCard key={book.id} book={book} index={i} />
+            ))}
+          </div>
         </div>
       </section>
 

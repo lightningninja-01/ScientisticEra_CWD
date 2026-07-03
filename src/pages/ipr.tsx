@@ -122,7 +122,8 @@ const iprServices = [
                      Intellectual Property Protection & Commercialization Services
                   </h1>
                   <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto mb-8">  
-                  Intellectual Property Protection & Commercialization Services                   </p>
+                  Protect your innovations with our comprehensive Intellectual Property Rights (IPR) assistance. We provide expert guidance for patents, copyrights, trademarks, industrial designs, and prior art searches, ensuring your ideas are legally protected and strategically managed.
+                  </p>
                   <p className="text-m mb-5">Securing innovation for researchers, startups and institutions.</p>
                   <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services."target="_blank">
                     <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100 font-bold px-8">
@@ -236,77 +237,7 @@ const iprServices = [
 
   </div>
 </section>
-      <section className="py-12 bg-gray-50 overflow-hidden">
 
-  <div className="max-w-7xl mx-auto px-6 text-center">
-
-    {/* Heading */}
-    <h2 className="text-3xl md:text-5xl font-bold mb-8 text-slate-900">
-      Our Publication And IPR Services
-    </h2>
-
-    {/* Slider */}
-    <div className="overflow-hidden relative group">
-
-      <div className="flex w-max gap-8 animate-marquee group-hover:[animation-play-state:paused]">
-
-        {/* Images */}
-        {[
-          "Ipr_service_01.png",
-          "Ipr_service_02.png",
-          "Ipr_service_03.png",
-          "Ipr_service_04.png",
-          "Ipr_service_05.png",
-          // "Ipr_service_06.png",
-          "Ipr_service_07.png",
-          // "Ipr_service_08.png"
-        ].map((img, i) => (
-
-          <div 
-            key={i}
-            className="w-95 h-80 overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300 hover:scale-105"
-          >
-            <img 
-              src={`/${img}`} 
-              className="w-full h-full object-cover"
-              alt={`IPR Service ${i + 1}`}
-            />
-          </div>
-
-        ))}
-
-        {/* Duplicate for smooth infinite scroll */}
-        {[
-          "Ipr_service_01.png",
-          "Ipr_service_02.png",
-          "Ipr_service_03.png",
-          "Ipr_service_04.png",
-          "Ipr_service_05.png",
-          "Ipr_service_06.png",
-          "Ipr_service_07.png",
-          "Ipr_service_08.png"
-        ].map((img, i) => (
-
-          <div 
-            key={`dup-${i}`}
-            className="w-95 h-80 overflow-hidden rounded-xl shadow-md hover:shadow-xl transition duration-300 hover:scale-105"
-          >
-            <img 
-              src={`/${img}`} 
-              className="w-full h-full object-cover"
-              alt={`IPR Service ${i + 1}`}
-            />
-          </div>
-
-        ))}
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
 
 
 
@@ -445,16 +376,7 @@ const iprServices = [
     <p className="text-gray-600 mb-8">
       Get expert IPR consultation and start securing your intellectual property today
     </p>
-
-    {/* Button */}
-    <div className="flex justify-center">
-      <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
-      <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg rounded-lg shadow-md">
-        Schedule a Free Consultation
-      </Button>
-      </Link>
-    </div>
-      
+  
   </div>
 </section>
 

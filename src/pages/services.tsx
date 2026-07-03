@@ -65,11 +65,7 @@ export default function Services() {
         {/* Hero Section */}
         <section className="pt-32 pb-16 px-4">
           <div className="container mx-auto max-w-6xl text-center">
-            <Badge className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 text-sm mb-6">
-              <Zap className="w-4 h-4 mr-2 inline" />
-              Comprehensive Research Solutions
-            </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               Every Service Your Research Needs
             </h1>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
@@ -159,15 +155,14 @@ export default function Services() {
                   <Badge className="bg-white/20 text-white px-3 py-1 text-sm w-fit mb-4">
                     Most Popular Service
                   </Badge>
-                  <h2 className="text-4xl font-bold mb-4">Research Paper Publication</h2>
+                  <h2 className="text-4xl font-bold mb-4">Article Paper</h2>
                   <p className="text-blue-100 text-lg leading-relaxed">
-                    Your breakthrough research deserves recognition in prestigious, peer-reviewed journals. 
-                    We guide you through every step of the publication journey with expert support and ethical practices.
+                    We provide end-to-end manuscript writing assistance for research articles, reviews, case reports, and book chapters. Our experts help improve scientific quality, readability, and journal compliance, enabling researchers to communicate their work effectively.
                   </p>
                   <div className="mt-8 space-y-3">
                     <div className="flex items-center gap-3">
                       <CheckCircle2 className="w-6 h-6 text-green-300" />
-                      <span className="text-blue-100">100+ Papers Successfully Published</span>
+                      <span className="text-blue-100">100+ Manuscripts Prepared</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <CheckCircle2 className="w-6 h-6 text-green-300" />
@@ -239,7 +234,7 @@ export default function Services() {
                   <div className="mt-8 pt-6 border-t border-gray-200">
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-gray-600">Average Publication Time:</span>
-                      <span className="font-bold text-blue-600">30-60 Days</span>
+                      <span className="font-bold text-blue-600">1 month to 1 year</span>
                     </div>
                     <Link href="/contact">
                       <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
@@ -251,6 +246,42 @@ export default function Services() {
                 </div>
               </div>
             </Card>
+
+            {/* Sliding Journals Marquee */}
+            <div className="mt-12 overflow-hidden relative rounded-2xl bg-gray-50 py-10 px-4 shadow-inner border border-gray-100">
+              <p className="text-center text-xs uppercase tracking-widest text-gray-400 font-bold mb-6">
+                Supporting Publications in Reputed Journals
+              </p>
+              <div className="flex w-max gap-8 animate-marquee hover:[animation-play-state:paused]">
+                {[
+                  "/SE_01.jpeg",
+                  "/SE_02.jpeg",
+                  "/SE_03.jpeg",
+                  "/SE_04.jpeg",
+                  "/SE_05.jpeg",
+                  "/SE_06.jpeg",
+                  "/SE_07.jpeg"
+                ].map((img, i) => (
+                  <div key={i} className="w-40 h-52 overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-105 bg-white p-2 flex-shrink-0">
+                    <img src={img} className="w-full h-full object-contain" alt={`Journal Cover ${i + 1}`} />
+                  </div>
+                ))}
+                {/* Duplicate for infinite scroll */}
+                {[
+                  "/SE_01.jpeg",
+                  "/SE_02.jpeg",
+                  "/SE_03.jpeg",
+                  "/SE_04.jpeg",
+                  "/SE_05.jpeg",
+                  "/SE_06.jpeg",
+                  "/SE_07.jpeg"
+                ].map((img, i) => (
+                  <div key={`dup-${i}`} className="w-40 h-52 overflow-hidden rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-105 bg-white p-2 flex-shrink-0">
+                    <img src={img} className="w-full h-full object-contain" alt={`Journal Cover ${i + 1}`} />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -822,7 +853,7 @@ export default function Services() {
                     <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="font-semibold text-gray-900">Filing & Prosecution</span>
-                      <p className="text-sm text-gray-600">Handle filing formalities and respond to patent office objections</p>
+                      <p className="text-gray-600 text-sm">Handle filing formalities and respond to patent office objections</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -892,7 +923,7 @@ export default function Services() {
                     <CheckCircle2 className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="font-semibold text-gray-900">Copyright Registration</span>
-                      <p className="text-sm text-gray-600">Register literary works, research papers, software, and artistic works</p>
+                      <p className="text-sm text-gray-600">Register literary works, article papers, software, and artistic works</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -994,7 +1025,7 @@ export default function Services() {
                   <div className="flex items-start gap-3">
                     <Trophy className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-1">Best Research Paper Awards</h4>
+                      <h4 className="font-bold text-gray-900 mb-1">Best Article Paper Awards</h4>
                       <p className="text-gray-600 text-sm">
                         Recognition for papers demonstrating exceptional research quality, methodology rigor, and contribution to field advancement
                       </p>
