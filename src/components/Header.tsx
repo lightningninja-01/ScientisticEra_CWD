@@ -17,7 +17,6 @@ export function Header() {
       dropdown: [
         { name: "Vision & Mission", href: "/about-vision-mission" },
         { name: "Our Founder", href: "/about-founder" },
-        { name: "Founder's Achievements", href: "/about-founder#founder-achievements" },
         { name: "Our Team", href: "/about-team" },
         // { name: "Our Partner", href: "/about-partner" },
       ],
