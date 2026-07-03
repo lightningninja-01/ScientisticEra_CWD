@@ -81,7 +81,7 @@ const webinarsData = [
   },
   {
     title: "10th National Webinar",
-    image: "/10th_national_webinar.png",
+    image: "/10th_national_webinar.jpeg",
     youtubeUrl: "https://www.youtube.com/live/ejGoyTRv3QY?si=ggMBp8eJwvhRtjVH",
     date: "Past Event",
     brief: "Latest trends in scientific research, data analysis methodologies, and utilizing modern knowledge platforms.",
@@ -100,7 +100,7 @@ export default function Webinars() {
     "/7th_national_webinar.png",
     "/8th_national_webinar.png",
     "/9th_national_webinar.png",
-    "/10th_national_webinar.png",
+    "/10th_national_webinar.jpeg",
     "/Upcoming_webinar.png"
   ];
 
