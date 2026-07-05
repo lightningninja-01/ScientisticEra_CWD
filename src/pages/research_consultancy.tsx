@@ -14,7 +14,7 @@ export default function Team() {
 
      
 
-<section className="py-32 bg-gray-100 text-center">
+<section className="pt-24 pb-8 bg-gray-100 text-center">
 
 <div className="max-w-6xl mx-auto px-6">
 
@@ -53,7 +53,7 @@ Submit Inquiry
 
 </section>
 
-<section className="py-20 bg-gray-100">
+<section className="py-12 bg-gray-100">
 
 <div className="max-w-7xl mx-auto px-6">
 
@@ -315,13 +315,13 @@ Start Your Publication Journey →
   </div>
 </section>
 
-<section className="py-24 bg-gray-50">
+<section className="py-12 bg-gray-50">
 
 <div className="max-w-7xl mx-auto px-6">
 
 {/* Heading */}
 
-<div className="text-center mb-16">
+<div className="text-center mb-10">
 
 <span className="bg-purple-100 text-purple-600 px-4 py-1 rounded-full text-sm font-medium">
 Expert Mentorship
@@ -501,13 +501,13 @@ Schedule a Consultation →
 </section>
 
 
-<section className="py-24 bg-gray-50">
+<section className="py-12 bg-gray-50">
 
 <div className="max-w-7xl mx-auto px-6">
 
 {/* Heading */}
 
-<div className="text-center mb-16">
+<div className="text-center mb-10">
 
 
 <span className="bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm font-medium">
