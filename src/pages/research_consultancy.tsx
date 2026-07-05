@@ -14,7 +14,7 @@ export default function Team() {
 
      
 
-<section className="pt-24 pb-8 bg-gray-100 text-center">
+<section className="pt-32 pb-8 bg-gray-100 text-center">
 
 <div className="max-w-6xl mx-auto px-6">
 

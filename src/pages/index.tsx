@@ -114,8 +114,7 @@ export default function Home() {
 
   const gallerySlides = [
     { src: "/Gallery-1.jpg", alt: "Gallery Exhibition 1" },
-    { src: "/Gallery-2.jpg", alt: "Gallery Exhibition 2" },
-    { src: "/Gallery-3.jpg", alt: "Gallery Exhibition 3" }
+    { src: "/about1.jpg", alt: "Gallery Exhibition 2" },
   ];
 
   useEffect(() => {
