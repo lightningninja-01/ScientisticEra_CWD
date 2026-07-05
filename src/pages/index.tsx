@@ -114,7 +114,7 @@ export default function Home() {
 
   const gallerySlides = [
     { src: "/Gallery-1.jpg", alt: "Gallery Exhibition 1" },
-    { src: "/about1.jpg", alt: "Gallery Exhibition 2" },
+    { src: "/about1.png", alt: "founder with Naik ji" },
   ];
 
   useEffect(() => {
