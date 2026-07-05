@@ -28,6 +28,7 @@ export default function Gallery() {
         "/7th_national_webinar.png",
         "/8th_national_webinar.png",
         "/9th_national_webinar.png",
+        "/10th_national_webinar.jpeg",
       ],
     },
     {

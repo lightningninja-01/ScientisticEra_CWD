@@ -63,7 +63,7 @@ export default function Services() {
         <Header />
 
         {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4">
+        <section className="pt-24 pb-8 px-4">
           <div className="container mx-auto max-w-6xl text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               Every Service Your Research Needs
@@ -76,8 +76,8 @@ export default function Services() {
         </section>
 
        
-        <section className="py-16 px-4">
-           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-6 text-center pb-5">
+        <section className="py-12 px-4">
+           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent mb-6 text-center pb-2">
              We Provide Best Services
             </h1>
   <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-3">
@@ -146,7 +146,7 @@ export default function Services() {
 
 
         {/* Research Paper Publication Service */}
-        <section className="py-20 px-4">
+        <section className="py-12 px-4">
           <div className="container mx-auto max-w-6xl">
             <Card className="overflow-hidden border-2 border-blue-200 shadow-2xl">
               <div className="grid md:grid-cols-2">
@@ -286,7 +286,7 @@ export default function Services() {
         </section>
 
         {/* Research Guidance & Mentorship */}
-        <section className="py-20 px-4 bg-white">
+        <section className="py-12 px-4 bg-white">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <Badge className="bg-purple-100 text-purple-700 px-4 py-2 text-sm mb-4">
@@ -476,7 +476,7 @@ export default function Services() {
         </section>
 
         {/* Thesis & Dissertation Support */}
-        <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-white">
+        <section className="py-12 px-4 bg-gradient-to-br from-gray-50 to-white">
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
@@ -635,7 +635,7 @@ export default function Services() {
         </section>
 
         {/* Webinars & Workshops */}
-        <section className="py-20 px-4">
+        <section className="py-12 px-4">
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <Card className="p-8 bg-gradient-to-br from-blue-50 to-indigo-50 order-2 md:order-1">
@@ -808,7 +808,7 @@ export default function Services() {
 
 
         {/* IPR Services */}
-        <section className="py-20 px-4 bg-white">
+        <section className="py-12 px-4 bg-white">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <Badge className="bg-orange-100 text-orange-700 px-4 py-2 text-sm mb-4">
@@ -1004,8 +1004,8 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Research Awards Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-purple-50 via-pink-50 to-red-50">
+        {/* ScientisticEra Awards */}
+        <section className="py-12 px-4 bg-gradient-to-br from-purple-50 via-pink-50 to-red-50">
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
@@ -1127,8 +1127,8 @@ export default function Services() {
           </div>
         </section>
 
-        {/* MOU Partnerships */}
-        <section className="py-20 px-4">
+        {/* Collaboration & MoU */}
+        <section className="py-12 px-4">
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <Card className="p-8 bg-gradient-to-br from-indigo-50 to-blue-50 order-2 md:order-1">
@@ -1232,7 +1232,7 @@ export default function Services() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
+        <section className="py-12 px-4 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Research Journey?

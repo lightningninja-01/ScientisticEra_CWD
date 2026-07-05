@@ -1,8 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
-import Image from "next/image";
-import { BookOpen, Award, Lightbulb, Play, Calendar, Presentation } from "lucide-react";
+import { BookOpen, Award, Lightbulb } from "lucide-react";
 
 const books = [
   {
@@ -57,87 +56,6 @@ function BookCard({ book, index }) {
 }
 
 export default function KnowledgePlatforms() {
-  // Webinars Data Array
-  const webinarsData = [
-    {
-      title: "1st International Webinar",
-      image: "/1st_International_webinar.png",
-      youtubeUrl: "https://www.youtube.com/watch?v=ejGoyTRv3QY",
-      date: "Past Event",
-      brief: "An insightful international session discussing global advancements in research, scientific publishing, and interdisciplinary collaborations.",
-    },
-    {
-      title: "1st National Webinar",
-      image: "/1st_national_webinar.png",
-      youtubeUrl: "https://www.youtube.com/watch?v=x0hiSJ9Nfu0",
-      date: "Past Event",
-      brief: "Our inaugural national webinar focusing on foundational research methodologies and the future of scientific writing in India.",
-    },
-    {
-      title: "2nd National Webinar",
-      image: "/2nd_national_webinar.png",
-      youtubeUrl: "https://www.youtube.com/watch?v=1ffkf5PuOkc",
-      date: "Past Event",
-      brief: "Deep dive into intellectual property rights (IPR) and how researchers can protect their innovative ideas and patents.",
-    },
-    {
-      title: "3rd National Webinar",
-      image: "/3rd_national_webinar.png",
-      youtubeUrl: "https://www.youtube.com/watch?v=ram1t9DcWkQ",
-      date: "Past Event",
-      brief: "A comprehensive guide on navigating high-impact journal submissions and understanding the peer-review process.",
-    },
-    {
-      title: "4th National Webinar",
-      image: "/4th_national_webinar.png",
-      youtubeUrl: "https://www.youtube.com/watch?v=PQ_eat5vxQA",
-      date: "Past Event",
-      brief: "Expert strategies for securing research grants and institutional funding for early-career researchers.",
-    },
-    {
-      title: "5th National Webinar",
-      image: "/5th_national_webinar.png",
-      youtubeUrl: "https://www.youtube.com/watch?v=DdAhc77HrJQ",
-      date: "Past Event",
-      brief: "Exploring the intersection of technology and healthcare research, featuring guest speakers from leading institutes.",
-    },
-    {
-      title: "6th National Webinar",
-      image: "/6th_national_webinar.png",
-      youtubeUrl: "https://www.youtube.com/watch?v=PFxzaA1r-88",
-      date: "Past Event",
-      brief: "Advanced manuscript drafting techniques: How to structure your thesis and research papers for maximum impact.",
-    },
-    {
-      title: "7th National Webinar",
-      image: "/7th_national_webinar.png",
-      youtubeUrl: "https://www.youtube.com/watch?v=T6siDMFFc8c",
-      date: "Past Event",
-      brief: "Understanding research ethics, plagiarism avoidance, and maintaining academic integrity in global publications.",
-    },
-    {
-      title: "8th National Webinar",
-      image: "/8th_national_webinar.png",
-      youtubeUrl: "https://www.youtube.com/watch?v=_S9OTvThBJ0",
-      date: "Past Event",
-      brief: "Bridging the gap between academic research and industry application. Real-world case studies and outcomes.",
-    },
-    {
-      title: "9th National Webinar",
-      image: "/9th_national_webinar.png",
-      youtubeUrl: "https://youtube.com/channel/UCafFU8VdRfXxuH7vNoSxCaQ",
-      date: "Past Event",
-      brief: "Latest trends in scientific research, data analysis methodologies, and utilizing modern knowledge platforms.",
-    },
-    {
-      title: "10th National Webinar",
-      image: "/10th_national_webinar.jpeg",
-      youtubeUrl: "https://www.youtube.com/live/ejGoyTRv3QY?si=ggMBp8eJwvhRtjVH",
-      date: "Past Event",
-      brief: "Latest trends in scientific research, data analysis methodologies, and utilizing modern knowledge platforms.",
-    }
-  ];
-
   return (
     <>
       <Header />
@@ -219,7 +137,7 @@ export default function KnowledgePlatforms() {
               <li>• Academic insights and commentary</li>
               <li>• Knowledge sharing across disciplines</li>
             </ul>
-            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank">
+            <Link href="https://scriptoriapublicationhouse.com/magazine" target="_blank">
               <button className="mt-8 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
                 Read the Magazine →
               </button>
@@ -270,75 +188,7 @@ export default function KnowledgePlatforms() {
         </div>
       </section>
 
-      {/* WEBINARS SECTION */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-4 font-semibold text-sm">
-              <Presentation className="w-4 h-4" />
-              <span>Knowledge Series</span>
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Webinars</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover our extensive archive of academic webinars. We bring together industry experts and researchers to share knowledge, discuss methodologies, and foster innovation.
-            </p>
-          </div>
 
-          {/* Webinar List */}
-          <div className="space-y-8">
-            {webinarsData.map((webinar, index) => (
-              <div 
-                key={index}
-                className="group bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden flex flex-col md:flex-row hover:shadow-2xl transition-all duration-300"
-              >
-                {/* Left Side: Poster Image */}
-                <div className="relative w-full md:w-1/3 lg:w-1/4 h-72 md:h-auto bg-gray-100 overflow-hidden shrink-0">
-                  <Image
-                    src={webinar.image}
-                    alt={webinar.title}
-                    fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-
-                {/* Right Side: Content & Brief */}
-                <div className="p-6 md:p-8 flex flex-col justify-center flex-1">
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-3 font-medium">
-                    <Calendar className="w-4 h-4" />
-                    <span>{webinar.date}</span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
-                    {webinar.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-8 leading-relaxed">
-                    {webinar.brief}
-                  </p>
-
-                  {/* Call to Action Button */}
-                  <div className="mt-auto">
-                    <a
-                      href={webinar.youtubeUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors w-fit shadow-md"
-                    >
-                      <Play className="w-5 h-5 fill-current" />
-                      Watch on YouTube
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
 
       <Footer />
     </>
