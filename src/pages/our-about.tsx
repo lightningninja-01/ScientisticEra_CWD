@@ -445,7 +445,6 @@ export default function OurStory() {
         { src: "/Team_01.png", name: "Dr. Sudhanshu Kumar Jha", role: "Founder & Director", linkedin: "sudhanshu-kumar-jha-ph-d-549472199" },
         { src: "/Team_02.png", name: "Ms. Mansi Negi", role: "Co-Founder & Head BD", linkedin: "mansi-negi-a6143614a" },
         { src: "/Team_03.png", name: "Mr. Vishwajeet", role: "Chief Technology Officer", linkedin: "techyvishwajeet" },
-        { src: "/Team_04.png", name: "Mr. Jaydeep S. Baghel", role: "Research Head Operations", linkedin: "jaydeep-baghel" },
         { src: "/Team_05.png", name: "Ms. Ishika Antil", role: "Research Specialist (Intern)", linkedin: "ishika-antil-486966285" },
         { src: "/Team_06.png", name: "Ms. Himani Raj", role: "Research (Intern)", linkedin: "himani-raj-034a27276" },
       ].map((member, idx) => (

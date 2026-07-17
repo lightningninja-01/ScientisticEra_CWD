@@ -493,67 +493,7 @@ export default function About() {
 </Card>
             </div>
 
-            {/* <div className="grid md:grid-cols-3 gap-8">
-              <Card className="p-8 bg-white/10 backdrop-blur border-2 border-white/20 hover:border-blue-400 transition-all">
-                <div className="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <User className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-2 text-center">Mr. Jaydeep S. Baghel</h3>
-                <p className="text-blue-400 text-center mb-4">Research Head Operations</p>
-                <p className="text-gray-300 text-center">
-                  Operational excellence expert ensuring seamless research project execution.
-                  Specialized in research methodology and quality assurance.
-                </p>
-              </Card>
-
-              <Card className="p-8 bg-white/10 backdrop-blur border-2 border-white/20 hover:border-blue-400 transition-all">
-                <div className="w-24 h-24 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <User className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-2 text-center">Ms. Ishika Antil</h3>
-                <p className="text-blue-400 text-center mb-4">Research Specialist (Intern)</p>
-                <p className="text-gray-300 text-center">
-                  Emerging research talent contributing to innovative research projects.
-                  Supporting data analysis and literature review processes.
-                </p>
-              </Card>
-
-              <Card className="p-8 bg-white/10 backdrop-blur border-2 border-white/20 hover:border-blue-400 transition-all">
-                <div className="w-24 h-24 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                  <User className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold mb-2 text-center">Ms. Himani Raj</h3>
-                <p className="text-blue-400 text-center mb-4">Research (Intern)</p>
-                <p className="text-gray-300 text-center">
-                  Dedicated research intern supporting various research initiatives.
-                  Contributing to research documentation and coordination.
-                </p>
-              </Card>
-            </div> */}
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12 justify-items-center">
-                          <Card className="overflow-hidden border-2 border-white/20 hover:border-blue-400 transition-all w-[320px]">
-  <div className="relative">
-    <img
-      src="/jaydeep.png"
-      alt="Mr. Jaydeep S. Baghel"
-      className="w-full h-[450px] object-cover"
-    />
-
-    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-    
-    <div className="absolute bottom-0 p-4 text-white w-full text-center">
-      <h3 className="text-xl font-bold">Mr. Jaydeep S. Baghel</h3>
-      <p className="text-blue-300 mb-1">Research Head Operations</p>
-      <p className="text-sm">
-         Operational excellence expert ensuring seamless research project execution.
-                  Specialized in research methodology and quality assurance.
-      </p>
-    </div>
-  </div>
-</Card>
-
-
+            <div className="grid md:grid-cols-2 max-w-4xl mx-auto gap-8 mb-12 justify-items-center">
               <Card className="overflow-hidden border-2 border-white/20 hover:border-blue-400 transition-all w-[320px]">
   <div className="relative">
     <img
