@@ -17,6 +17,7 @@ export default function Gallery() {
       id: "webinars",
       label: "Webinars",
       images: [
+        "/webinar-image.webp",
         "/Upcoming_webinar.png",
         "/1st_International_webinar.png",
         "/1st_national_webinar.png",
@@ -212,6 +213,21 @@ export default function Gallery() {
 
               {/* Responsive Grid for all your YouTube Videos */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="flex flex-col gap-3 group">
+                  <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-gray-100 group-hover:shadow-2xl group-hover:border-blue-400 transition-all duration-300">
+                    <video
+                      className="absolute top-0 left-0 w-full h-full"
+                      controls
+                      preload="metadata"
+                    >
+                      <source src="/Journal Discussion.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <h3 className="font-bold text-gray-800 px-2 group-hover:text-blue-600 transition-colors">
+                    Journal Discussion
+                  </h3>
+                </div>
                 {[
                   // Previous Videos
                   { id: "1ffkf5PuOkc", title: "2nd National Webinar" },
