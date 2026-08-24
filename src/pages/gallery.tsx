@@ -8,12 +8,13 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { founderGalleryCategories } from "@/lib/founderGalleryData";
 
-// ─── Existing gallery categories (unchanged) ────────────────────────────────
+// ─── Existing gallery categories (merged with remote) ───────────────────────
 const existingCategories = [
   {
     id: "webinars",
     label: "Webinars",
     images: [
+      { src: "/webinar-image.webp",            alt: "Webinar Image" },
       { src: "/Upcoming_webinar.png",          alt: "Upcoming Webinar" },
       { src: "/1st_International_webinar.png",  alt: "1st International Webinar" },
       { src: "/1st_national_webinar.png",       alt: "1st National Webinar" },
@@ -208,7 +209,7 @@ export default function Gallery() {
                             alt={img.alt}
                             fill
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                            className="object-cover group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                            className="object-contain p-2"
                             loading="lazy"
                           />
                         </div>
@@ -245,6 +246,23 @@ export default function Gallery() {
 
                   {/* Responsive Grid for all YouTube Videos */}
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {/* Local MP4 video first */}
+                    <div className="flex flex-col gap-3 group">
+                      <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-gray-200 bg-gray-100 group-hover:shadow-2xl group-hover:border-blue-400 transition-all duration-300">
+                        <video
+                          className="absolute top-0 left-0 w-full h-full"
+                          controls
+                          preload="metadata"
+                        >
+                          <source src="/Journal Discussion.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <h3 className="font-bold text-gray-800 px-2 group-hover:text-blue-600 transition-colors">
+                        Journal Discussion
+                      </h3>
+                    </div>
+
                     {[
                       // Previous Videos
                       { id: "1ffkf5PuOkc", title: "2nd National Webinar" },
