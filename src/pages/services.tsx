@@ -104,11 +104,10 @@ export default function Services() {
 
     {/* Card 2 */}
     <div className="bg-white rounded-2xl shadow-lg p-6 text-center hover:shadow-2xl transition">
-      {/* <img src="/Service_02.png" alt="" className="w-full h-60 object-cover rounded-xl mb-6" /> */}
       <div className="overflow-hidden rounded-xl mb-6 bg-white flex items-center justify-center">
   <img
-    src="/Service_02.png"
-    alt=""
+    src="/award-recognition-generic.png"
+    alt="Academician & Researcher Awards"
     className="w-full max-h-64 object-contain transition-transform duration-500 ease-in-out hover:scale-110"
   />
 </div>
@@ -1005,7 +1004,7 @@ export default function Services() {
         </section>
 
         {/* ScientisticEra Awards */}
-        <section className="py-12 px-4 bg-gradient-to-br from-purple-50 via-pink-50 to-red-50">
+        <section id="scientisticera-awards" className="py-12 px-4 bg-gradient-to-br from-purple-50 via-pink-50 to-red-50">
           <div className="container mx-auto max-w-6xl">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>

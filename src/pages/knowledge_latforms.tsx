@@ -1,7 +1,9 @@
+"use client";
+import { useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
-import { BookOpen, Award, Lightbulb } from "lucide-react";
+import { BookOpen, Award, Lightbulb, ChevronLeft, ChevronRight } from "lucide-react";
 
 const books = [
   {
@@ -36,7 +38,7 @@ const books = [
   },
 ];
 
-function BookCard({ book, index }) {
+function BookCard({ book, index }: { book: typeof books[0]; index: number }) {
   return (
     <div className="flex items-stretch gap-0 rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
       <div className={`${book.spine} w-4 flex-shrink-0`} />
@@ -51,6 +53,59 @@ function BookCard({ book, index }) {
           <div key={i} className="w-3 h-[2px] bg-gray-300 rounded-full" />
         ))}
       </div>
+    </div>
+  );
+}
+
+// ─── Simple image slider reused for both Awards and Magazine ─────────────────
+function ImageSlider({ images, alt }: { images: string[]; alt: string }) {
+  const [current, setCurrent] = useState(0);
+  const prev = () => setCurrent((c) => (c - 1 + images.length) % images.length);
+  const next = () => setCurrent((c) => (c + 1) % images.length);
+
+  return (
+    <div className="relative rounded-xl overflow-hidden bg-gray-100 select-none">
+      {/* Image */}
+      <img
+        src={images[current]}
+        alt={`${alt} ${current + 1}`}
+        className="w-full h-80 object-contain"
+        loading="lazy"
+      />
+
+      {/* Prev / Next buttons */}
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={prev}
+            aria-label="Previous"
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={next}
+            aria-label="Next"
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full p-1.5 transition"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          {/* Dot indicators */}
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                aria-label={`Go to slide ${i + 1}`}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  i === current ? "bg-white scale-125" : "bg-white/50"
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 }
@@ -144,9 +199,15 @@ export default function KnowledgePlatforms() {
             </Link>
           </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="bg-gray-100 rounded-xl h-80 flex items-center justify-center text-gray-400">
-            Magazine Preview (Add Image/Slider)
+          {/* RIGHT — magazine slider: teal first, then blue */}
+          <div>
+            <ImageSlider
+              images={[
+                "/magazine-scientistic-era-teal.png",
+                "/magazine-scientistic-era-blue.png",
+              ]}
+              alt="ScientisticEra Universal E-Magazine cover"
+            />
           </div>
         </div>
       </section>
@@ -154,9 +215,16 @@ export default function KnowledgePlatforms() {
       {/* SCIENTISTIC ERA AWARDS */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          {/* LEFT IMAGE */}
-          <div className="bg-gray-200 rounded-xl h-80 flex items-center justify-center text-gray-400">
-            Awards Showcase (Add Image/Slider)
+          {/* LEFT — awards slider: generic first, then male, then female */}
+          <div>
+            <ImageSlider
+              images={[
+                "/award-recognition-generic.png",
+                "/award-recognition-male.png",
+                "/award-recognition-female.png",
+              ]}
+              alt="ScientisticEra Award"
+            />
           </div>
 
           {/* RIGHT */}
@@ -179,7 +247,7 @@ export default function KnowledgePlatforms() {
               <li>• Opportunities for emerging researchers and scholars</li>
               <li>• Global visibility within the academic community</li>
             </ul>
-            <Link href="https://wa.me/917068507857?text=Welcome%20to%20ScientisticEra!%20I%20would%20like%20to%20know%20more%20about%20your%20services.">
+            <Link href="/services#scientisticera-awards">
               <button className="mt-8 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
                 Explore the Awards →
               </button>
@@ -187,8 +255,6 @@ export default function KnowledgePlatforms() {
           </div>
         </div>
       </section>
-
-
 
       <Footer />
     </>
