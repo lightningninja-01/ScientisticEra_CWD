@@ -1,0 +1,21 @@
+
+> softgen-starter@2.4.4 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.5.9 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.100.142:3000
+
+ ✓ Starting...
+Creating turbopack project {
+  dir: 'C:\\Users\\singh\\OneDrive\\Desktop\\scientistic era\\scientistic era\\ScientisticEra-Private-Ltd.-main',
+  testMode: true
+}
+ ✓ Ready in 18.7s
+ ○ Compiling / ...
+ ✓ Compiled / in 20.3s
+ HEAD / 200 in 692ms
+ GET / 200 in 652ms
+ GET / 200 in 2990ms
+ ○ Compiling /about-vision-mission ...
+ ✓ Compiled /about-vision-mission in 20.5s
