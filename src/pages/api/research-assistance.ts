@@ -93,10 +93,10 @@ export default async function handler(
     });
   }
 
-  if (!cleanProblem || cleanProblem.length < 5 || cleanProblem.length > 3000) {
+  if (cleanProblem && cleanProblem.length > 3000) {
     return res.status(400).json({
       success: false,
-      message: "Please provide a brief description of your research problem (at least 5 characters).",
+      message: "Please keep your research problem description under 3000 characters.",
     });
   }
 
@@ -116,6 +116,7 @@ export default async function handler(
   }
 
   // Format email content exactly as requested
+  const displayedProblem = cleanProblem || "N/A (Not provided)";
   const emailSubject = `New Research Assistance Request - ${cleanName}`;
   const plainTextContent = `New Research Assistance Request
 
@@ -124,7 +125,7 @@ Mobile Number: ${cleanMobile}
 Email Address: ${cleanEmail}
 
 Research Problem:
-${cleanProblem}
+${displayedProblem}
 
 Source:
 Scientistic Era Website`;
@@ -178,7 +179,7 @@ Scientistic Era Website`;
 
           <div style="margin-bottom: 24px;">
             <div style="font-weight: 600; color: #475569; font-size: 14px; margin-bottom: 8px;">Research Problem:</div>
-            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 14px 16px; color: #0f172a; font-size: 14px; white-space: pre-wrap; word-break: break-word;">${escapeHtml(cleanProblem)}</div>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 14px 16px; color: ${cleanProblem ? "#0f172a" : "#64748b"}; font-size: 14px; white-space: pre-wrap; word-break: break-word;">${escapeHtml(displayedProblem)}</div>
           </div>
 
           <div style="padding-top: 16px; border-top: 1px solid #f1f5f9;">

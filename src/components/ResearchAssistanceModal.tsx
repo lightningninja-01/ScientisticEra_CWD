@@ -86,10 +86,8 @@ export function ResearchAssistanceModal() {
       errors.email = "Please enter a valid email address.";
     }
 
-    if (!formData.researchProblem.trim()) {
-      errors.researchProblem = "Please describe your research problem.";
-    } else if (formData.researchProblem.trim().length < 5) {
-      errors.researchProblem = "Please provide at least 5 characters.";
+    if (formData.researchProblem.trim() && formData.researchProblem.trim().length > 3000) {
+      errors.researchProblem = "Please keep your message under 3000 characters.";
     }
 
     setFormErrors(errors);
@@ -336,7 +334,7 @@ export function ResearchAssistanceModal() {
                     htmlFor="researchProblem"
                     className="block text-xs font-semibold text-gray-700 uppercase tracking-wider mb-1"
                   >
-                    How can we help you? <span className="text-red-500">*</span>
+                    How can we help you?
                   </label>
                   <Textarea
                     id="researchProblem"
